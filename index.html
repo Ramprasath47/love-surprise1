@@ -1,0 +1,5396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<title>A Special Surprise For You</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main id="surpriseApp">
+
+<!-- PAGE 1: HEART -->
+
+<!-- ================= PAGE 1: INTERACTIVE HEART ================= -->
+
+<section
+    id="page-1"
+    class="page active heart-page"
+    aria-labelledby="heartTitle"
+>
+    <canvas
+        id="glitterCanvas"
+        aria-hidden="true"
+    ></canvas>
+
+    <div class="heart-container">
+
+        <p class="eyebrow">
+            A little surprise is waiting
+        </p>
+
+        <h1 id="heartTitle">
+            Click Here
+            <span aria-hidden="true">👇</span>
+        </h1>
+
+        <div class="heart-stage">
+
+            <span class="heart-orbit orbit-one" aria-hidden="true"></span>
+            <span class="heart-orbit orbit-two" aria-hidden="true"></span>
+
+            <span class="mini-heart mini-heart-one" aria-hidden="true">♥</span>
+            <span class="mini-heart mini-heart-two" aria-hidden="true">♥</span>
+            <span class="mini-heart mini-heart-three" aria-hidden="true">♥</span>
+
+            <button
+                id="heartBtn"
+                class="heart-button"
+                type="button"
+                aria-label="Open your surprise"
+            >
+                <span class="heart-symbol" aria-hidden="true">♥</span>
+                <span class="heart-shine" aria-hidden="true"></span>
+            </button>
+
+        </div>
+
+        <p class="heart-hint">
+            Touch My Heart, Dear Azhagi 💖
+        </p>
+
+        <p class="heart-sound-hint">
+            Tap the heart and listen carefully 🎧
+        </p>
+
+    </div>
+
+    <!-- Keep this audio file in the same folder as index.html -->
+    <audio
+        id="heartbeatSound"
+        preload="auto"
+        loop
+    >
+        <source
+            src="lenspulse-intense-cinematic-heartbeat-sound-effect-584627.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+</section>
+
+
+<!-- PAGE 2: PROFILE SELECTION -->
+
+<!-- ================= PAGE 2: CHOOSE A HEART ================= -->
+
+<section
+    id="page-2"
+    class="page profile-page"
+    aria-labelledby="profilePageTitle"
+>
+    <canvas
+        id="profileGlitterCanvas"
+        aria-hidden="true"
+    ></canvas>
+
+    <div class="romantic-orb romantic-orb-one" aria-hidden="true"></div>
+    <div class="romantic-orb romantic-orb-two" aria-hidden="true"></div>
+
+    <div class="profile-content">
+
+        <p class="profile-eyebrow">
+            Chapter One
+        </p>
+
+        <h1 id="profilePageTitle">
+            Choose the Heart That
+            <span>Opens Our Story</span>
+        </h1>
+
+        <p class="profile-description">
+            Only one special heart holds the key to this surprise.
+        </p>
+
+        <div class="profiles-container">
+
+            <!-- RAJI PROFILE -->
+
+            <button
+                class="profile-card raji-profile"
+                id="profileBtnRaji"
+                type="button"
+                aria-label="Continue with Raji profile"
+            >
+                <span class="portrait-frame" data-initial="R">
+
+                    <img
+                        src="IMG_20260720_224058_253.jpg"
+                        alt="Raji profile photo"
+                    >
+
+                    <span class="portrait-overlay" aria-hidden="true"></span>
+
+                    <span class="profile-symbol" aria-hidden="true">
+                        ♥
+                    </span>
+
+                </span>
+
+                <span class="profile-information">
+
+                    <span class="profile-name">
+                        Raji
+                    </span>
+
+                    <span class="profile-role">
+                        The Chosen Heart
+                    </span>
+
+                </span>
+            </button>
+
+
+            <!-- CLICKABLE LOVE METER -->
+
+            <div class="love-connection">
+
+                <span class="connection-line" aria-hidden="true"></span>
+
+                <button
+                    id="loveMeterBtn"
+                    class="love-meter-button"
+                    type="button"
+                    aria-label="Open our love meter"
+                    aria-haspopup="dialog"
+                    aria-controls="loveMeterModal"
+                >
+                    <span class="love-heart-rings" aria-hidden="true"></span>
+
+                    <span class="tiny-heart" aria-hidden="true">
+                        ♥
+                    </span>
+
+                    <span class="love-meter-label">
+                        Love Meter
+                    </span>
+                </button>
+
+                <span class="connection-line" aria-hidden="true"></span>
+
+            </div>
+
+
+            <!-- RAM PROFILE -->
+
+            <button
+                class="profile-card ram-profile"
+                id="profileBtnRam"
+                type="button"
+                aria-label="Continue with Ram profile"
+            >
+                <span class="portrait-frame" data-initial="R">
+
+                    <img
+                        src="Pic.jpg"
+                        alt="Ram profile photo"
+                    >
+
+                    <span class="portrait-overlay" aria-hidden="true"></span>
+
+                    <span class="profile-symbol" aria-hidden="true">
+                        🔒
+                    </span>
+
+                </span>
+
+                <span class="profile-information">
+
+                    <span class="profile-name">
+                        Ram
+                    </span>
+
+                    <span class="profile-role">
+                        The Secret Keeper
+                    </span>
+
+                </span>
+            </button>
+
+        </div>
+
+        <p class="profile-footer-hint">
+            Hint: Even the tiny heart between us has a surprise ✨
+        </p>
+
+    </div>
+
+
+    <!-- ================= RAM ERROR DIALOGUE ================= -->
+
+    <div
+        id="systemErrorModal"
+        class="dialog-overlay system-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="systemTitle"
+        aria-describedby="ramErrorMessage"
+        hidden
+    >
+        <div class="system-dialog-box">
+
+            <div class="system-dialog-header">
+
+                <div>
+                    <span class="dialog-error-code">
+                        HEART_ACCESS_DENIED
+                    </span>
+
+                    <h2 id="systemTitle">
+                        Wrong Heart Selected!
+                    </h2>
+                </div>
+
+                <button
+                    id="closeDialogBtn"
+                    class="dialog-close-button"
+                    type="button"
+                    aria-label="Close error message"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+            <div class="system-dialog-body">
+
+                <div class="system-error-icon" aria-hidden="true">
+                    🤪
+                </div>
+
+                <div>
+
+                    <strong>
+                        Select only Azhagi's photo, my dear!
+                    </strong>
+
+                    <p id="ramErrorMessage">
+                        Oiii Azhagi, poi Rajalakshmi photo-va
+                        click pannu surprise-ku. Ram photo-kulla
+                        ethuvum illa.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="system-dialog-footer">
+
+                <button
+                    id="okDialogBtn"
+                    type="button"
+                >
+                    Okay, Ram! 😜
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= INFINITY LOVE METER ================= -->
+
+    <div
+        id="loveMeterModal"
+        class="dialog-overlay love-meter-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="loveMeterTitle"
+        aria-describedby="loveMeterStatus"
+        hidden
+    >
+        <div
+            id="loveMeterPanel"
+            class="love-meter-panel"
+        >
+            <button
+                id="closeLoveMeterBtn"
+                class="love-dialog-close"
+                type="button"
+                aria-label="Close love meter"
+            >
+                &times;
+            </button>
+
+            <p class="love-meter-eyebrow">
+                Analysing Two Hearts
+            </p>
+
+            <h2 id="loveMeterTitle">
+                Ram
+                <span aria-hidden="true">♥</span>
+                Raji
+            </h2>
+
+            <div class="infinity-display" aria-hidden="true">
+
+                <span class="infinity-glow"></span>
+
+                <span class="infinity-symbol">
+                    ∞
+                </span>
+
+                <span class="infinity-heart">
+                    ♥
+                </span>
+
+            </div>
+
+            <div class="meter-reading">
+
+                <span
+                    id="loveMeterValue"
+                    class="love-meter-value"
+                    aria-live="polite"
+                >
+                    0%
+                </span>
+
+                <div
+                    class="love-meter-track"
+                    role="progressbar"
+                    aria-label="Love calculation"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                >
+                    <span
+                        id="loveMeterFill"
+                        class="love-meter-fill"
+                    ></span>
+                </div>
+
+            </div>
+
+            <p
+                id="loveMeterStatus"
+                class="love-meter-status"
+                aria-live="polite"
+            >
+                Connecting both hearts...
+            </p>
+
+            <button
+                id="loveMeterOkBtn"
+                class="love-meter-ok"
+                type="button"
+            >
+                Forever & Always ♾️
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- RAM ERROR VOICE -->
+
+    <audio
+        id="RamVoiceError"
+        preload="auto"
+        loop
+    >
+        <source
+            src="universfield-child-voice-no-02-242246 (1).mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+</section>
+
+<!-- ================= PAGE 3: INFINITY LOVE INTRO ================= -->
+
+<section
+    id="page-3"
+    class="page intro-page"
+    aria-labelledby="foreverIntroTitle"
+>
+    <div
+        id="foreverIntroScreen"
+        class="forever-intro-screen"
+    >
+        <!-- Background stars -->
+
+        <div class="forever-star-field" aria-hidden="true">
+            <span style="--x: 7%; --y: 16%; --size: 3px; --delay: 0.2s;"></span>
+            <span style="--x: 15%; --y: 72%; --size: 2px; --delay: 1.1s;"></span>
+            <span style="--x: 24%; --y: 28%; --size: 4px; --delay: 0.6s;"></span>
+            <span style="--x: 34%; --y: 84%; --size: 3px; --delay: 1.6s;"></span>
+            <span style="--x: 45%; --y: 12%; --size: 2px; --delay: 0.8s;"></span>
+            <span style="--x: 56%; --y: 78%; --size: 4px; --delay: 1.4s;"></span>
+            <span style="--x: 67%; --y: 21%; --size: 3px; --delay: 0.4s;"></span>
+            <span style="--x: 76%; --y: 67%; --size: 2px; --delay: 1.8s;"></span>
+            <span style="--x: 86%; --y: 30%; --size: 4px; --delay: 1s;"></span>
+            <span style="--x: 93%; --y: 82%; --size: 3px; --delay: 0.3s;"></span>
+            <span style="--x: 9%; --y: 44%; --size: 2px; --delay: 1.3s;"></span>
+            <span style="--x: 89%; --y: 52%; --size: 2px; --delay: 0.7s;"></span>
+        </div>
+
+        <!-- Moving cinematic light streaks -->
+
+        <div class="love-light-streaks" aria-hidden="true">
+            <span style="--x: 8%; --delay: 0s;"></span>
+            <span style="--x: 20%; --delay: 0.18s;"></span>
+            <span style="--x: 34%; --delay: 0.36s;"></span>
+            <span style="--x: 48%; --delay: 0.12s;"></span>
+            <span style="--x: 62%; --delay: 0.42s;"></span>
+            <span style="--x: 76%; --delay: 0.24s;"></span>
+            <span style="--x: 90%; --delay: 0.5s;"></span>
+        </div>
+
+        <!-- Infinity seal -->
+
+        <div class="forever-infinity-seal">
+
+            <span
+                class="forever-orbit forever-orbit-one"
+                aria-hidden="true"
+            ></span>
+
+            <span
+                class="forever-orbit forever-orbit-two"
+                aria-hidden="true"
+            ></span>
+
+            <!-- Floating particles -->
+
+            <div class="forever-love-particles" aria-hidden="true">
+                <span class="love-particle particle-one">✦</span>
+                <span class="love-particle particle-two">♥</span>
+                <span class="love-particle particle-three">✧</span>
+                <span class="love-particle particle-four">♥</span>
+                <span class="love-particle particle-five">✦</span>
+                <span class="love-particle particle-six">♥</span>
+            </div>
+
+            <!-- Infinity animation -->
+
+            <div class="infinity-intro-wrapper">
+
+                <svg
+                    class="love-infinity-svg"
+                    viewBox="0 0 460 240"
+                    role="img"
+                    aria-label="Glowing infinity love symbol"
+                >
+                    <defs>
+
+                        <linearGradient
+                            id="infinityLoveGradient"
+                            x1="0"
+                            y1="0"
+                            x2="1"
+                            y2="1"
+                        >
+                            <stop
+                                offset="0%"
+                                stop-color="#ffffff"
+                            ></stop>
+
+                            <stop
+                                offset="22%"
+                                stop-color="#ffc0d2"
+                            ></stop>
+
+                            <stop
+                                offset="50%"
+                                stop-color="#ff174f"
+                            ></stop>
+
+                            <stop
+                                offset="78%"
+                                stop-color="#ff76a0"
+                            ></stop>
+
+                            <stop
+                                offset="100%"
+                                stop-color="#ffffff"
+                            ></stop>
+                        </linearGradient>
+
+                        <filter
+                            id="infinityGlow"
+                            x="-60%"
+                            y="-60%"
+                            width="220%"
+                            height="220%"
+                        >
+                            <feGaussianBlur
+                                stdDeviation="8"
+                                result="blur"
+                            ></feGaussianBlur>
+
+                            <feMerge>
+                                <feMergeNode in="blur"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+
+                        <filter
+                            id="travellingGlow"
+                            x="-100%"
+                            y="-100%"
+                            width="300%"
+                            height="300%"
+                        >
+                            <feGaussianBlur
+                                stdDeviation="5"
+                                result="lightBlur"
+                            ></feGaussianBlur>
+
+                            <feMerge>
+                                <feMergeNode in="lightBlur"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+
+                    </defs>
+
+                    <!-- Wide background glow -->
+
+                    <path
+                        class="infinity-glow-path"
+                        pathLength="1"
+                        d="
+                            M230 120
+                            C180 40 120 25 70 55
+                            C20 85 20 155 70 185
+                            C120 215 180 200 230 120
+                            C280 40 340 25 390 55
+                            C440 85 440 155 390 185
+                            C340 215 280 200 230 120
+                        "
+                    ></path>
+
+                    <!-- Main infinity line -->
+
+                    <path
+                        class="infinity-main-path"
+                        pathLength="1"
+                        d="
+                            M230 120
+                            C180 40 120 25 70 55
+                            C20 85 20 155 70 185
+                            C120 215 180 200 230 120
+                            C280 40 340 25 390 55
+                            C440 85 440 155 390 185
+                            C340 215 280 200 230 120
+                        "
+                    ></path>
+
+                    <!-- Moving sparkle around infinity -->
+
+                    <path
+                        class="infinity-spark-path"
+                        pathLength="1"
+                        d="
+                            M230 120
+                            C180 40 120 25 70 55
+                            C20 85 20 155 70 185
+                            C120 215 180 200 230 120
+                            C280 40 340 25 390 55
+                            C440 85 440 155 390 185
+                            C340 215 280 200 230 120
+                        "
+                    ></path>
+
+                </svg>
+
+                <!-- Heart at the infinity centre -->
+
+                <span
+                    id="infinityCenterHeart"
+                    class="infinity-center-heart"
+                    aria-hidden="true"
+                >
+                    ♥
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- Couple names -->
+
+        <p class="forever-names">
+            Raji
+            <span aria-hidden="true">∞</span>
+            Ram
+        </p>
+
+        <!-- Main title -->
+
+        <h1
+            id="foreverIntroTitle"
+            class="forever-intro-title"
+        >
+            Beginning of Our Forever
+        </h1>
+
+        <p class="forever-intro-subtitle">
+            Two hearts. One beautiful infinity.
+        </p>
+
+        <!-- Page transition status -->
+
+        <div class="forever-transition-area">
+
+            <p
+                id="foreverTransitionText"
+                class="forever-transition-text"
+                aria-live="polite"
+            >
+                Drawing our infinite bond...
+            </p>
+
+            <div
+                class="forever-progress-track"
+                aria-hidden="true"
+            >
+                <span class="forever-progress-fill"></span>
+            </div>
+
+            <button
+                id="skipInfinityIntroBtn"
+                class="enter-forever-button"
+                type="button"
+            >
+                Enter Our Forever
+                <span aria-hidden="true">→</span>
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PAGE 4: PASSWORD -->
+
+<!-- ================= PAGE 4: SECRET CODE ================= -->
+
+<section
+    id="page-4"
+    class="page lock-page"
+    aria-labelledby="lockTitle"
+>
+    <!-- Matrix background -->
+    <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+
+    <!-- Matrix sound -->
+    <audio id="matrixSound" preload="auto" loop>
+        <source src="liecio-calming-rain-257596.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="lock-overlay">
+
+        <form id="passwordForm" class="lock-box" novalidate>
+
+            <!-- Profile card -->
+            <div class="profile-card">
+
+                <div class="profile-photo">
+                    <img
+                        src="2026-06-26-21-40-22-957.jpg"
+                        alt="Our special memory"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('photo-error');"
+                    >
+
+                    <span class="photo-fallback">
+                        R ❤️ R
+                    </span>
+                </div>
+
+                <div class="profile-details">
+                    <span class="online-dot"></span>
+
+                    <div>
+                        <h3>Raji ❤️ Ram</h3>
+                        <p>Forever connected</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="lock-kicker">
+                Private Access
+            </p>
+
+            <h2 id="lockTitle">
+                Enter Secret Code
+            </h2>
+
+            <p class="lock-copy">
+                Only the keeper of my heart knows this one.
+            </p>
+
+            <div class="input-group">
+
+                <input
+                    type="password"
+                    id="passInput"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    maxlength="8"
+                    placeholder="DDMMYYYY"
+                    aria-label="Enter the secret code"
+                >
+
+                <button id="enterBtn" type="submit">
+                    Come Inside ❤️
+                </button>
+
+            </div>
+
+            <p class="password-hint">
+                Hint: The day our beautiful journey became special.
+            </p>
+
+        </form>
+
+    </div>
+
+    <!-- Funny error dialogue -->
+    <div
+        id="passwordErrorDialog"
+        class="error-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="errorDialogTitle"
+        hidden
+    >
+        <div class="error-dialog-backdrop"></div>
+
+        <div class="error-dialog-box">
+
+            <button
+                id="closeErrorDialog"
+                class="error-dialog-close"
+                type="button"
+                aria-label="Close error dialogue"
+            >
+                ×
+            </button>
+
+            <div class="error-emoji" aria-hidden="true">
+                🤨
+            </div>
+
+            <p class="error-label">
+                LOVE SYSTEM ERROR
+            </p>
+
+            <h3 id="errorDialogTitle">
+                Ayyo! Wrong Password Potuta, !
+            </h3>
+
+            <p id="funnyErrorMessage">
+                Ram is watching you! How could you forget our special day?
+            </p>
+
+            <div class="error-code">
+                ERROR CODE: LOVE_404
+            </div>
+
+            <button
+                id="tryAgainBtn"
+                class="try-again-btn"
+                type="button"
+            >
+                Let Me Try Again 😅
+            </button>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- PAGE 5: COUNTDOWN -->
+
+<section id="page-5" class="page final-page" aria-labelledby="finalTitle">
+
+    <button
+        id="page5MusicButton"
+        class="page5-music-button music-paused"
+        type="button"
+        aria-label="Play background music"
+        title="Play music"
+    >
+        <span class="music-icon" aria-hidden="true">♪</span>
+        <span id="page5MusicLabel">Play Song</span>
+        <span class="music-bars" aria-hidden="true">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </button>
+
+    <div class="final-shell">
+
+        <div class="countdown-wrap">
+
+            <p class="eyebrow light">
+                Forever starts in
+            </p>
+
+            <h2>
+                Time Left Until Our New Life Begins
+            </h2>
+
+            <div
+                class="timer-display"
+                aria-live="polite"
+                aria-label="Wedding countdown"
+            >
+
+                <div class="time-card">
+                    <span id="days" class="number">00</span>
+                    <span class="label">Days</span>
+                </div>
+
+                <div class="time-card">
+                    <span id="hours" class="number">00</span>
+                    <span class="label">Hours</span>
+                </div>
+
+                <div class="time-card">
+                    <span id="minutes" class="number">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+
+                <div class="time-card">
+                    <span id="seconds" class="number">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="final-content">
+
+            <span class="love-mark" aria-hidden="true">♥</span>
+
+            <h1 id="finalTitle">
+                Welcome Inside, My Love!
+            </h1>
+
+            <p>
+                Every click brought you closer to the
+                surprise I made only for you.
+            </p>
+
+            <button class="action-btn" id="nextBtn" type="button"
+            aria-controls="page-gallery"
+    >
+                See Our Memories
+                <span aria-hidden="true">→</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BACKGROUND MUSIC -->
+
+<audio id="loveBgm" preload="auto" loop>
+    <source
+        src="page5-love-song.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+
+<!-- ================= MEMORY GALLERY PAGE ================= -->
+
+<section
+    id="page-gallery"
+    class="page gallery-page"
+    aria-labelledby="galleryTitle"
+>
+    <div
+        id="floatingHearts"
+        class="floating-hearts"
+        aria-hidden="true"
+    ></div>
+
+    <header class="gallery-header">
+
+        <p class="eyebrow light">
+            You + Me
+        </p>
+
+        <h2 id="galleryTitle">
+            Our Special Memories
+        </h2>
+
+        <p>
+            Tap each hidden memory to reveal it.
+        </p>
+
+    </header>
+
+    <div class="tile-grid" id="tileGrid">
+
+        <!-- MEMORY 1 -->
+
+        <button
+            class="image-tile featured"
+            type="button"
+            data-img="file_0000000074e071fa8cd4022f32011977.png"
+            data-caption="One beautiful chapter"
+            aria-label="Reveal memory 1"
+            aria-pressed="false"
+        >
+            <span class="reveal-orbit" aria-hidden="true"></span>
+
+            <span class="tile-card">
+
+                <span class="tile-back">
+
+                    <span class="corner-decoration top-left"></span>
+                    <span class="corner-decoration bottom-right"></span>
+
+                    <span class="memory-envelope" aria-hidden="true">
+                        <span class="envelope-line"></span>
+                        <span class="back-heart">♥</span>
+                    </span>
+
+                    <span class="reveal-text">
+                        Tap to reveal
+                    </span>
+
+                    <span class="reveal-number">
+                        Memory 01
+                    </span>
+
+                </span>
+
+                <span class="tile-front">
+
+                    <img
+                        src="file_0000000074e071fa8cd4022f32011977.png"
+                        alt="Our memory 1"
+                        data-fallback-name="Memory 1"
+                    >
+
+                    <span class="image-shine" aria-hidden="true"></span>
+
+                    <span class="tile-caption">
+                        One beautiful chapter
+                    </span>
+
+                </span>
+
+            </span>
+        </button>
+
+
+        <!-- MEMORY 2 -->
+
+        <button
+            class="image-tile"
+            type="button"
+            data-img="IMG-20260701-WA0020.jpg"
+            data-caption="That smile I love"
+            aria-label="Reveal memory 2"
+            aria-pressed="false"
+        >
+            <span class="reveal-orbit" aria-hidden="true"></span>
+
+            <span class="tile-card">
+
+                <span class="tile-back">
+
+                    <span class="corner-decoration top-left"></span>
+                    <span class="corner-decoration bottom-right"></span>
+
+                    <span class="memory-envelope" aria-hidden="true">
+                        <span class="envelope-line"></span>
+                        <span class="back-heart">♥</span>
+                    </span>
+
+                    <span class="reveal-text">
+                        Tap to reveal
+                    </span>
+
+                    <span class="reveal-number">
+                        Memory 02
+                    </span>
+
+                </span>
+
+                <span class="tile-front">
+
+                    <img
+                        src="IMG-20260701-WA0020.jpg"
+                        alt="Our memory 2"
+                        data-fallback-name="Memory 2"
+                    >
+
+                    <span class="image-shine" aria-hidden="true"></span>
+
+                    <span class="tile-caption">
+                        That smile I love
+                    </span>
+
+                </span>
+
+            </span>
+        </button>
+
+
+        <!-- MEMORY 3 -->
+
+        <button
+            class="image-tile"
+            type="button"
+            data-img="2026-06-26-23-10-08-175.jpg"
+            data-caption="Always better together"
+            aria-label="Reveal memory 3"
+            aria-pressed="false"
+        >
+            <span class="reveal-orbit" aria-hidden="true"></span>
+
+            <span class="tile-card">
+
+                <span class="tile-back">
+
+                    <span class="corner-decoration top-left"></span>
+                    <span class="corner-decoration bottom-right"></span>
+
+                    <span class="memory-envelope" aria-hidden="true">
+                        <span class="envelope-line"></span>
+                        <span class="back-heart">♥</span>
+                    </span>
+
+                    <span class="reveal-text">
+                        Tap to reveal
+                    </span>
+
+                    <span class="reveal-number">
+                        Memory 03
+                    </span>
+
+                </span>
+
+                <span class="tile-front">
+
+                    <img
+                        src="2026-06-26-23-10-08-175.jpg"
+                        alt="Our memory 3"
+                        data-fallback-name="Memory 3"
+                    >
+
+                    <span class="image-shine" aria-hidden="true"></span>
+
+                    <span class="tile-caption">
+                        Always better together
+                    </span>
+
+                </span>
+
+            </span>
+        </button>
+
+
+        <!-- MEMORY 4 -->
+
+        <button
+            class="image-tile"
+            type="button"
+            data-img="IMG-20260407-WA0006.jpg"
+            data-caption="My favourite person"
+            aria-label="Reveal memory 4"
+            aria-pressed="false"
+        >
+            <span class="reveal-orbit" aria-hidden="true"></span>
+
+            <span class="tile-card">
+
+                <span class="tile-back">
+
+                    <span class="corner-decoration top-left"></span>
+                    <span class="corner-decoration bottom-right"></span>
+
+                    <span class="memory-envelope" aria-hidden="true">
+                        <span class="envelope-line"></span>
+                        <span class="back-heart">♥</span>
+                    </span>
+
+                    <span class="reveal-text">
+                        Tap to reveal
+                    </span>
+
+                    <span class="reveal-number">
+                        Memory 04
+                    </span>
+
+                </span>
+
+                <span class="tile-front">
+
+                    <img
+                        src="IMG-20260407-WA0006.jpg"
+                        alt="Our memory 4"
+                        data-fallback-name="Memory 4"
+                    >
+
+                    <span class="image-shine" aria-hidden="true"></span>
+
+                    <span class="tile-caption">
+                        My favourite person
+                    </span>
+
+                </span>
+
+            </span>
+        </button>
+
+
+        <!-- MEMORY 5 -->
+
+        <button
+            class="image-tile"
+            type="button"
+            data-img="1000125399.jpg"
+            data-caption="More smiles, more memories"
+            aria-label="Reveal memory 5"
+            aria-pressed="false"
+        >
+            <span class="reveal-orbit" aria-hidden="true"></span>
+
+            <span class="tile-card">
+
+                <span class="tile-back">
+
+                    <span class="corner-decoration top-left"></span>
+                    <span class="corner-decoration bottom-right"></span>
+
+                    <span class="memory-envelope" aria-hidden="true">
+                        <span class="envelope-line"></span>
+                        <span class="back-heart">♥</span>
+                    </span>
+
+                    <span class="reveal-text">
+                        Tap to reveal
+                    </span>
+
+                    <span class="reveal-number">
+                        Memory 05
+                    </span>
+
+                </span>
+
+                <span class="tile-front">
+
+                    <img
+                        src="1000125399.jpg"
+                        alt="Our memory 5"
+                        data-fallback-name="Memory 5"
+                    >
+
+                    <span class="image-shine" aria-hidden="true"></span>
+
+                    <span class="tile-caption">
+                        More smiles, more memories
+                    </span>
+
+                </span>
+
+            </span>
+        </button>
+
+
+        <!-- MEMORY 6 -->
+
+        <button
+            class="image-tile wide"
+            type="button"
+            data-img="IMG_20260709_211442_832.jpg"
+            data-caption="My Little Girl as a Kid"
+            aria-label="Reveal memory 6"
+            aria-pressed="false"
+        >
+            <span class="reveal-orbit" aria-hidden="true"></span>
+
+            <span class="tile-card">
+
+                <span class="tile-back">
+
+                    <span class="corner-decoration top-left"></span>
+                    <span class="corner-decoration bottom-right"></span>
+
+                    <span class="memory-envelope" aria-hidden="true">
+                        <span class="envelope-line"></span>
+                        <span class="back-heart">♥</span>
+                    </span>
+
+                    <span class="reveal-text">
+                        Tap to reveal
+                    </span>
+
+                    <span class="reveal-number">
+                        Memory 06
+                    </span>
+
+                </span>
+
+                <span class="tile-front">
+
+                    <img
+                        src="IMG_20260709_211442_832.jpg"
+                        alt="My little girl as a kid"
+                        data-fallback-name="Memory 6"
+                    >
+
+                    <span class="image-shine" aria-hidden="true"></span>
+
+                    <span class="tile-caption">
+                        My Little Girl as a Kid
+                    </span>
+
+                </span>
+
+            </span>
+        </button>
+
+    </div>
+
+
+    <!-- NEXT PAGE CARD -->
+
+    <div
+        class="gallery-surprise-next"
+        id="gallerySurpriseNext"
+    >
+        <div
+            class="gallery-next-heart"
+            aria-hidden="true"
+        >
+            ❤️
+        </div>
+
+        <p class="gallery-next-small">
+            Those photos were only a few pieces of our story...
+        </p>
+
+        <h3>
+            But Azhagi... I still have so much more to tell you ❤️
+        </h3>
+
+        <p class="gallery-next-description">
+            You have seen our memories. Now I want you to know
+            what you really mean to me.
+        </p>
+
+        <button
+            id="specialMessageBtn"
+            class="love-primary-btn"
+            type="button"
+        >
+            <span>
+                There Is Something More For You 💌
+            </span>
+
+            <span
+                class="next-arrow"
+                aria-hidden="true"
+            >
+                →
+            </span>
+        </button>
+    </div>
+
+
+    <!-- EXPANDED IMAGE DIALOG -->
+
+    <dialog
+        id="imageModal"
+        class="image-modal"
+        aria-labelledby="imageCaption"
+    >
+        <button
+            id="closeImageBtn"
+            class="image-close-btn"
+            type="button"
+            aria-label="Close expanded image"
+        >
+            &times;
+        </button>
+
+        <img
+            id="expandedImg"
+            alt="Expanded memory"
+        >
+
+        <p id="imageCaption"></p>
+    </dialog>
+
+</section>
+
+
+<!-- PAGE 7: REASONS -->
+
+<section id="page-reasons" class="page love-page reasons-page">
+
+    <div class="love-page-shell">
+
+        <p class="love-eyebrow">Chapter One</p>
+
+        <h1>
+            Why I Fell In Love With You ❤️
+        </h1>
+
+        <p class="love-intro">
+            Memories tell our story, but these are the little reasons
+            that made you my favourite person.
+        </p>
+
+        <div class="reason-grid" id="reasonGrid">
+
+            <button class="reason-card" type="button">
+                <span class="reason-number">01</span>
+                <span class="reason-envelope">💌</span>
+                <span class="reason-hidden">
+                    உன் புன்னகைக்குள் ஏதோ ஓர் அழகிய மாயம்…
+                    சில நொடிகளில் என் மனநிலையை மாற்றி,
+                    என் உலகம் முழுவதையும் மகிழ்ச்சியால் நிரப்பிவிடுகிறது! ❤️
+                </span>
+            </button>
+
+            <button class="reason-card" type="button">
+                <span class="reason-number">02</span>
+                <span class="reason-envelope">💌</span>
+                <span class="reason-hidden">
+                    உன்னுடன் இருக்கும் ஒவ்வொரு சாதாரண நொடியும்,
+                    என் வாழ்வின் அழகான தருணமாக மாறிவிடுகிறது…
+                    அதனால்தான் உன்னுடன் இருக்கும் வாழ்க்கையை நான் நேசிக்கிறேன்!
+                </span>
+            </button>
+
+            <button class="reason-card" type="button">
+                <span class="reason-number">03</span>
+                <span class="reason-envelope">💌</span>
+                <span class="reason-hidden">
+                    உன் மகிழ்ச்சி மெல்ல மெல்ல,
+                    என் வாழ்க்கையில் மிக முக்கியமான ஒன்றாக மாறிவிட்டது…
+                    ஏனெனில் உன் சிரிப்பில்தான் என் சந்தோஷமும் வாழ்கிறது!
+                </span>
+            </button>
+
+            <button class="reason-card" type="button">
+                <span class="reason-number">04</span>
+                <span class="reason-envelope">💌</span>
+                <span class="reason-hidden">
+                    என் நாளில் நடக்கும் சின்னச் சின்ன விஷயங்களைக்கூட,
+                    முதலில் உன்னிடமே சொல்ல வேண்டும் என்று என் மனம் தேடுகிறது…
+                    ஏனெனில் என் ஒவ்வொரு கதையின் முடிவிலும் நீயே இருக்கிறாய்! ❤️
+                </span>
+            </button>
+
+            <button class="reason-card" type="button">
+                <span class="reason-number">05</span>
+                <span class="reason-envelope">💌</span>
+                <span class="reason-hidden">
+                    உன் செல்லக் கோப முகம்கூட,
+                    எப்படியோ என் மனதிற்குப் பிடித்த முகங்களில் ஒன்றாகிவிட்டது…
+                    நீ கோபப்பட்டாலும், என் கண்களுக்கு நீ பேரழகிதான்! ❤️
+                </span>
+            </button>
+
+            <button class="reason-card" type="button">
+                <span class="reason-number">06</span>
+                <span class="reason-envelope">💌</span>
+                <span class="reason-hidden">
+                    உன்னுடன் இருக்கும் நாளையை நான் வெறும் கனவாகக் காணவில்லை…
+                    அது எப்போது வரும் என்று ஆவலுடன் காத்திருக்கிறேன்,
+                    ஏனெனில் என் ஒவ்வொரு நாளையும் அழகாக்கப் போவது நீதானே! ❤️
+                </span>
+            </button>
+
+            <button class="reason-card" type="button">
+                <span class="reason-number">07</span>
+                <span class="reason-envelope">💌</span>
+                <span class="reason-hidden">
+                    என் மனதின் ஆறுதலாகவும், என் சிரிப்பின் காரணமாகவும்,
+                    என்னை மறக்கச் செய்யும் இனிய கவனச்சிதறலாகவும் நீ மாறிவிட்டாய்…
+                    மொத்தத்தில், என் மனதிற்குப் பிடித்த அனைத்துமே நீதான்! ❤️
+                </span>
+            </button>
+
+            <button class="reason-card" type="button">
+                <span class="reason-number">08</span>
+                <span class="reason-envelope">💌</span>
+                <span class="reason-hidden">
+                    இந்த உலகில் எத்தனையோ மனிதர்கள் இருந்தாலும்,
+                    என் இதயம் உன்னை மட்டுமே தனது இல்லமாகத் தேர்ந்தெடுத்தது…
+                    ஏனெனில் எனக்கான நிம்மதியும், அன்பும், பாதுகாப்பும் நீதான்! ❤️
+                </span>
+            </button>
+
+        </div>
+
+        <button
+            class="love-primary-btn page-next-btn"
+            data-love-target="page-voice"
+            type="button"
+        >
+            There Is Something I Want You To Hear 🎧
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= PAGE: LOVE LETTER ================= -->
+
+<section
+    id="page-voice"
+    class="page love-page message-page"
+    aria-labelledby="loveLetterTitle"
+>
+    <!-- Romantic background decorations -->
+
+    <div class="message-background" aria-hidden="true">
+
+        <div class="message-glow glow-one"></div>
+        <div class="message-glow glow-two"></div>
+
+        <span class="floating-love-symbol symbol-one">♥</span>
+        <span class="floating-love-symbol symbol-two">♡</span>
+        <span class="floating-love-symbol symbol-three">♥</span>
+        <span class="floating-love-symbol symbol-four">♡</span>
+        <span class="floating-love-symbol symbol-five">♥</span>
+
+        <div class="message-stars">
+            <span style="--x: 8%; --y: 16%; --delay: 0s;"></span>
+            <span style="--x: 19%; --y: 74%; --delay: 1.2s;"></span>
+            <span style="--x: 31%; --y: 29%; --delay: 0.6s;"></span>
+            <span style="--x: 46%; --y: 85%; --delay: 1.8s;"></span>
+            <span style="--x: 58%; --y: 13%; --delay: 0.9s;"></span>
+            <span style="--x: 71%; --y: 69%; --delay: 2.2s;"></span>
+            <span style="--x: 84%; --y: 24%; --delay: 1.5s;"></span>
+            <span style="--x: 94%; --y: 80%; --delay: 0.3s;"></span>
+        </div>
+
+    </div>
+
+    <div class="love-page-shell letter-shell">
+
+        <header class="letter-header">
+
+            <p class="love-eyebrow">
+                Chapter Two
+            </p>
+
+            <h1 id="loveLetterTitle">
+                A Letter From My Heart,
+                <span>Azhagi</span>
+            </h1>
+
+            <p class="love-intro">
+                Some feelings are too precious to remain hidden.
+                So I placed them carefully inside this little letter,
+                only for you.
+            </p>
+
+        </header>
+
+
+        <!-- Love-letter reveal section -->
+
+        <div id="loveLetterStage" class="love-letter-stage">
+
+            <!-- Closed envelope -->
+
+            <div class="sealed-envelope">
+
+                <div class="envelope-shadow"></div>
+
+                <div class="envelope-body">
+
+                    <span class="envelope-left-fold"></span>
+                    <span class="envelope-right-fold"></span>
+                    <span class="envelope-bottom-fold"></span>
+
+                    <div class="envelope-hidden-letter">
+                        <span>To My Azhagi</span>
+                        <small>With all my love</small>
+                    </div>
+
+                    <span class="envelope-flap"></span>
+
+                    <button
+                        id="openLoveLetterBtn"
+                        class="wax-seal"
+                        type="button"
+                        aria-label="Open my love letter"
+                    >
+                        <span aria-hidden="true">♥</span>
+                    </button>
+
+                </div>
+
+                <p class="open-letter-text">
+                    Touch the heart to open my letter
+                </p>
+
+            </div>
+
+
+            <!-- Revealed love letter -->
+
+            <article
+                id="revealedLoveLetter"
+                class="revealed-love-letter"
+                aria-live="polite"
+            >
+                <span
+                    class="letter-corner corner-top-left"
+                    aria-hidden="true"
+                ></span>
+
+                <span
+                    class="letter-corner corner-bottom-right"
+                    aria-hidden="true"
+                ></span>
+
+                <div class="letter-heading">
+
+                    <span
+                        class="letter-small-heart"
+                        aria-hidden="true"
+                    >
+                        ♥
+                    </span>
+
+                    <p>My Dearest Raji Ma,</p>
+
+                </div>
+
+                <div class="love-message-content">
+
+                    <p class="love-message-line">
+                        Raji ma… en life-la nee vandhadhukku appuram,
+                        ellame konjam konjama azhaga maara
+                        aarambichiduchu.
+                    </p>
+
+                    <p class="love-message-line">
+                        Un kooda pesura chinna chinna conversations,
+                        un sirippu, un chella kovam… idhellame enakku
+                        romba special.
+                    </p>
+
+                    <p class="love-message-line">
+                        Naan tired-ah irundhaalum, un voice ketta
+                        udane en mind peaceful-ah aagidum. Un
+                        happiness dhaan ippo enakku romba mukkiyam.
+                    </p>
+
+                    <p class="love-message-line">
+                        Namma future-a ninaikkumbodhu, enakku bayam
+                        illa… romba excitement dhaan irukku.
+                    </p>
+
+                    <p class="love-message-line">
+                        Enna nadandhaalum, naan un pakkathula
+                        iruppen. Unna sirikka veppen, care pannippen,
+                        ovvoru naalum innum adhigama love pannippen.
+                    </p>
+
+                    <p class="love-message-line final-love-line">
+                        Love you so much, en Azhagi… nee dhaan en
+                        home, en happiness, en forever. ❤️
+                    </p>
+
+                </div>
+
+                <footer class="letter-signature">
+
+                    <span>Forever Yours,</span>
+                    <strong>Your Laddu ❤️</strong>
+
+                </footer>
+
+            </article>
+
+        </div>
+
+
+        <!-- Next page button -->
+
+        <button
+            id="messageNextBtn"
+            class="love-primary-btn message-next-btn"
+            data-love-target="page-story"
+            type="button"
+        >
+            <span>Continue Our Story ❤️</span>
+
+            <span
+                class="message-next-arrow"
+                aria-hidden="true"
+            >
+                →
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 9: STORY -->
+
+<section id="page-story" class="page love-page story-page">
+
+    <div class="love-page-shell">
+
+        <p class="love-eyebrow">Chapter Three</p>
+
+        <h1>The Story Of Us ❤️</h1>
+
+        <p class="love-intro">
+            Every forever has a beginning. This one is ours.
+        </p>
+
+        <div class="love-timeline">
+
+            <article class="timeline-item">
+                <span class="timeline-dot">❤️</span>
+                <div class="timeline-card">
+                    <small>THE BEGINNING</small>
+                    <h3>The Day Our Story Started 24.06.2026</h3>
+                    <p>
+                        Iruvarkum Veru Veru vaazhkai, konjam konjamaga serndhu, 
+                        oru azhagana kaadhal kadhaiyaaga maara aarambichiduchu. ❤️
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <span class="timeline-dot">💬</span>
+                <div class="timeline-card">
+                    <small>THE CONVERSATIONS</small>
+                    <h3>When Talking To You Became My Habit</h3>
+                    <p>
+                        Chinna chinna conversations-ku naduvula,
+                        eppadiyo nee en manasukku romba nerukkamaagitta…
+                        Oru naal pesala-naalum, unna thedura alavukku! ❤️
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <span class="timeline-dot">📸</span>
+                <div class="timeline-card">
+                    <small>THE MEMORIES</small>
+                    <h3>One Photo Became Hundreds</h3>
+                    <p>
+                        Namma edukura ovvoru photo-um,
+                        un kooda innum pala azhagana tharunangalai vaazhanum-nu
+                        en manasu aasai paduradhukku oru saatchiya maariduchu! ❤️
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <span class="timeline-dot">💍</span>
+                <div class="timeline-card">
+                    <small>THE PROMISE</small>
+                    <h3>We Chose Forever</h3>
+                    <p>
+                        Oru Azhagana naal mattum podhaadhu…
+                        En vaazhkai muzhuvadhum un pakkathil,
+                        un kai pidithu nadakka vendum! ❤️
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item timeline-future">
+                <span class="timeline-dot">∞</span>
+                <div class="timeline-card">
+                    <small>NOVEMBER 11, 2026</small>
+                    <h3>Husband & Wife ❤️</h3>
+                    <p>
+                        And that is where our next chapter begins.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+        <button
+            class="love-primary-btn page-next-btn"
+            data-love-target="page-quiz"
+            type="button"
+        >
+            Okay Azhagi... Quiz Time Ku Pogalama ipo 😂. Correct ah Sollatha oru oru Questions ku 100 Kisses save aagum Atha Kandipa Kudukanum 😎😅
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 10: QUIZ -->
+
+<!-- ================= RELATIONSHIP QUIZ ================= -->
+
+<section
+    id="page-quiz"
+    class="page love-page quiz-page"
+    aria-labelledby="quizTitle"
+>
+    <div class="love-page-shell quiz-shell">
+
+        <p class="love-eyebrow">
+            Relationship Security Check
+        </p>
+
+        <h1 id="quizTitle">
+            How Well Do You Know Us? 😂
+        </h1>
+
+        <p class="quiz-intro">
+            Choose carefully, Azhagi! The Love Security System
+            is watching every answer. 😂❤️
+        </p>
+
+
+        <!-- QUIZ BOX -->
+
+        <div id="quizBox" class="quiz-box">
+
+            <div class="quiz-progress">
+
+                <div class="quiz-progress-info">
+
+                    <span id="quizProgress">
+                        Question 1 / 10
+                    </span>
+
+                    <span id="quizProgressPercentage">
+                        10%
+                    </span>
+
+                </div>
+
+                <div class="quiz-progress-track">
+                    <span id="quizProgressBar"></span>
+                </div>
+
+            </div>
+
+            <div
+                id="quizQuestionNumber"
+                class="quiz-question-number"
+                aria-hidden="true"
+            >
+                01
+            </div>
+
+            <h2 id="quizQuestion"></h2>
+
+            <div
+                id="quizAnswers"
+                class="quiz-answers"
+            ></div>
+
+            <p
+                id="quizFeedback"
+                class="quiz-feedback"
+                aria-live="polite"
+            ></p>
+
+
+            <!-- NEXT QUESTION BUTTON -->
+
+            <button
+                id="quizNextQuestionBtn"
+                class="quiz-next-question-btn"
+                type="button"
+                hidden
+            >
+                <span>Aduthu Polama? ❤️</span>
+
+                <span
+                    class="quiz-next-arrow"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
+            </button>
+
+        </div>
+
+
+        <!-- FINAL RESULT -->
+
+        <div
+            id="quizResult"
+            class="quiz-result"
+            hidden
+        >
+            <div
+                class="quiz-result-heart"
+                aria-hidden="true"
+            >
+                ❤️
+            </div>
+
+            <p class="quiz-result-label">
+                LOVE COMPATIBILITY ANALYSIS
+            </p>
+
+            <div class="compatibility-bar">
+                <span></span>
+            </div>
+
+            <h2>100% ❤️</h2>
+
+            <p>
+                Unfortunately you are permanently stuck with Ram.
+            </p>
+
+            <strong>
+                No cancellation.
+                <br>
+                No refund.
+                <br>
+                Lifetime subscription. 😂❤️
+            </strong>
+
+            <button
+                id="quizFinalNextBtn"
+                class="love-primary-btn page-next-btn"
+                data-love-target="page-puzzle"
+                type="button"
+            >
+                Unlock The Next Memory 🧩
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- WRONG ANSWER DIALOG -->
+
+    <div
+        id="quizWrongDialog"
+        class="quiz-wrong-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="quizWrongTitle"
+        hidden
+    >
+        <div class="quiz-dialog-backdrop"></div>
+
+        <div class="quiz-dialog-box">
+
+            <div
+                class="quiz-dialog-emoji"
+                aria-hidden="true"
+            >
+                🤨
+            </div>
+
+            <p class="quiz-dialog-label">
+                LOVE SECURITY ALERT
+            </p>
+
+            <h2 id="quizWrongTitle">
+                Ayyo Azhagi!
+            </h2>
+
+            <p id="quizWrongMessage">
+                Thappana answer select pannita! 😂
+            </p>
+
+            <div class="quiz-error-code">
+                ERROR: LOVE_ANSWER_MISMATCH
+            </div>
+
+            <button
+                id="closeQuizDialogBtn"
+                class="quiz-dialog-close-btn"
+                type="button"
+            >
+                Seri Seri, Purinjiduchu 😅
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 11: PUZZLE -->
+
+<!-- ================= PAGE: LOVE PUZZLE ================= -->
+
+<section
+    id="page-puzzle"
+    class="page love-page puzzle-page"
+    aria-labelledby="puzzleTitle"
+>
+    <div class="love-page-shell puzzle-shell">
+
+        <p class="love-eyebrow">
+            Chapter Four
+        </p>
+
+        <h1 id="puzzleTitle">
+            Put Us Back Together 🧩
+        </h1>
+
+        <p class="love-intro">
+            Click two pieces to swap them.
+            Complete our picture to unlock the message.
+        </p>
+
+
+        <!-- REFERENCE PICTURE -->
+
+        <div class="puzzle-reference">
+
+            <button
+                id="referencePictureBtn"
+                class="reference-picture-btn"
+                type="button"
+                aria-expanded="false"
+            >
+                <span>👀 View Original Picture</span>
+                <span
+                    class="reference-arrow"
+                    aria-hidden="true"
+                >
+                    ↓
+                </span>
+            </button>
+
+            <div
+                id="referencePicture"
+                class="reference-picture"
+                hidden
+            >
+                <img
+                    src="1000119181.jpg"
+                    alt="Original picture for solving our love puzzle"
+                >
+
+                <p>
+                    This is the picture you need to complete ❤️
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- PUZZLE -->
+
+        <div
+            id="lovePuzzle"
+            class="love-puzzle"
+            data-image="1000119181.jpg"
+            aria-label="Love photo puzzle"
+        ></div>
+
+        <p
+            id="puzzleStatus"
+            class="puzzle-status"
+            aria-live="polite"
+        >
+            Select two pieces to swap them ❤️
+        </p>
+
+        <button
+            id="shufflePuzzleBtn"
+            class="love-secondary-btn shuffle-puzzle-btn"
+            type="button"
+        >
+            <span aria-hidden="true">↻</span>
+            Shuffle Again
+        </button>
+
+
+        <!-- ALTERNATIVE LOVE FIELD -->
+
+        <div
+            id="puzzleAlternative"
+            class="puzzle-alternative"
+        >
+            <div
+                class="alternative-heart"
+                aria-hidden="true"
+            >
+                💌
+            </div>
+
+            <p class="alternative-small">
+                Puzzle romba tough-ah irukka?
+            </p>
+
+            <h2>
+                Unlock It With Your Love
+            </h2>
+
+            <p class="alternative-description">
+                Type the secret love sentence below to unlock
+                the message without completing the puzzle.
+            </p>
+
+            <form
+                id="loveUnlockForm"
+                class="love-unlock-form"
+                novalidate
+            >
+                <label for="loveUnlockInput">
+                    Enter:
+                    <strong>I Love You Ramprasath</strong>
+                </label>
+
+                <input
+                    id="loveUnlockInput"
+                    class="love-unlock-input"
+                    type="text"
+                    autocomplete="off"
+                    spellcheck="false"
+                    aria-describedby="loveUnlockFeedback"
+                >
+
+                <button
+                    id="loveUnlockSubmit"
+                    class="love-unlock-submit"
+                    type="submit"
+                >
+                    Submit My Love ❤️
+                </button>
+
+            </form>
+
+            <p
+                id="loveUnlockFeedback"
+                class="love-unlock-feedback"
+                aria-live="polite"
+            ></p>
+
+        </div>
+
+
+        <!-- PUZZLE COMPLETE MESSAGE -->
+
+        <div
+            id="puzzleComplete"
+            class="puzzle-complete"
+            hidden
+        >
+            <span aria-hidden="true">❤️</span>
+
+            <h2>
+                You Put Us Back Together
+            </h2>
+
+            <p>
+                No matter how scattered life becomes,
+                I will always choose to put us back together.
+            </p>
+
+            <button
+    id="puzzleHomeBtn"
+    class="love-primary-btn page-next-btn puzzle-home-btn"
+    data-love-target="page-future-home"
+    type="button"
+>
+    <span>Visit Our Future Home 🏠</span>
+    <span class="puzzle-next-arrow" aria-hidden="true">→</span>
+</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PAGE: OUR FUTURE HOME ================= -->
+
+<!-- =============================================================
+     CHANGE YOUR EXISTING PUZZLE BUTTON TARGET TO:
+     data-love-target="page-future-home"
+============================================================= -->
+
+<!-- ================= PAGE: OUR FUTURE HOME ================= -->
+
+<section
+    id="page-future-home"
+    class="page love-page future-home-page"
+    aria-labelledby="futureHomeTitle"
+>
+    <div class="future-home-background" aria-hidden="true">
+        <span class="future-home-orb orb-one"></span>
+        <span class="future-home-orb orb-two"></span>
+        <span class="future-home-star star-one">✦</span>
+        <span class="future-home-star star-two">✦</span>
+        <span class="future-home-star star-three">✦</span>
+        <span class="future-home-star star-four">✦</span>
+    </div>
+
+    <div class="future-home-shell">
+        <p class="future-home-eyebrow">Chapter Five · Our Little World</p>
+
+        <h1 id="futureHomeTitle">The Doors To Our Future Home 🏠</h1>
+
+        <p class="future-home-intro">
+            Six doors. Six promises. Open every room and discover the life
+            I quietly dream of building with you.
+        </p>
+
+        <div class="future-home-progress" aria-live="polite">
+            <div class="future-progress-copy">
+                <span id="futureRoomProgressText">0 of 6 rooms opened</span>
+                <strong id="futureRoomProgressPercent">0%</strong>
+            </div>
+
+            <div
+                class="future-progress-track"
+                role="progressbar"
+                aria-label="Future Home rooms opened"
+                aria-valuemin="0"
+                aria-valuemax="6"
+                aria-valuenow="0"
+            >
+                <span id="futureRoomProgressBar"></span>
+            </div>
+        </div>
+
+        <div id="futureRoomGrid" class="future-room-grid">
+            <button
+                class="future-room-card"
+                type="button"
+                data-room-id="sunrise-room"
+                data-room-title="The Sunrise Room"
+                data-room-icon="☀️"
+                data-room-message="Indha araiyil ovvoru kaalaiyum oru vaakkurudhiyoda dhaan vidiyum: indha ulagam nammakitta edhaiyum ketkuradhukku munnaadiye, naan marubadiyum unnaiye therndheduppen."
+                aria-expanded="false"
+            >
+                <span class="future-door-stage">
+                    <span class="future-room-inside">
+                        <span class="future-inside-icon">☀️</span>
+                        <strong>Good Morning, Love</strong>
+                        <small>A new day for us</small>
+                    </span>
+
+                    <span class="future-room-door door-rose">
+                        <span class="future-door-number">01</span>
+                        <span class="future-door-panels" aria-hidden="true">
+                            <i></i><i></i><i></i><i></i>
+                        </span>
+                        <span class="future-door-sign">Sunrise Room</span>
+                        <span class="future-door-knob" aria-hidden="true"></span>
+                    </span>
+                </span>
+
+                <span class="future-door-instruction">Tap to open</span>
+                <span class="future-room-check" aria-hidden="true">✓</span>
+            </button>
+
+            <button
+                class="future-room-card"
+                type="button"
+                data-room-id="little-library"
+                data-room-title="Our Little Library"
+                data-room-icon="📚"
+                data-room-message="Indha kadhavula, namma amaidhiyaana naatkalum, pesi mudikkaadha pechugalum, chella sandaigalum, oru vaarthai kooda pesa thevai illaama un pakkathula utkaarndhirukkura andha nimmadhiyum irukkanumnu aasai paduren."
+                aria-expanded="false"
+            >
+                <span class="future-door-stage">
+                    <span class="future-room-inside">
+                        <span class="future-inside-icon">📚</span>
+                        <strong>Stories & Silence</strong>
+                        <small>Both feel beautiful with you</small>
+                    </span>
+
+                    <span class="future-room-door door-plum">
+                        <span class="future-door-number">02</span>
+                        <span class="future-door-panels" aria-hidden="true">
+                            <i></i><i></i><i></i><i></i>
+                        </span>
+                        <span class="future-door-sign">Little Library</span>
+                        <span class="future-door-knob" aria-hidden="true"></span>
+                    </span>
+                </span>
+
+                <span class="future-door-instruction">Tap to open</span>
+                <span class="future-room-check" aria-hidden="true">✓</span>
+            </button>
+
+            <button
+                class="future-room-card"
+                type="button"
+                data-room-id="dream-workshop"
+                data-room-title="The Dream Workshop"
+                data-room-icon="🎨"
+                data-room-message="Indha araiyila un kanavugala “alavukku meeriya aasai”nu yaarum solla maattaanga. Naan un kanavugala paadhukaappen, un kooda serndhu adhai nijamaakkuven, nee valarndhu maarum ovvoru nilaiyilum unnai kondaaduven."
+                aria-expanded="false"
+            >
+                <span class="future-door-stage">
+                    <span class="future-room-inside">
+                        <span class="future-inside-icon">🎨</span>
+                        <strong>Dream Without Fear</strong>
+                        <small>I will build beside you</small>
+                    </span>
+
+                    <span class="future-room-door door-blue">
+                        <span class="future-door-number">03</span>
+                        <span class="future-door-panels" aria-hidden="true">
+                            <i></i><i></i><i></i><i></i>
+                        </span>
+                        <span class="future-door-sign">Dream Workshop</span>
+                        <span class="future-door-knob" aria-hidden="true"></span>
+                    </span>
+                </span>
+
+                <span class="future-door-instruction">Tap to open</span>
+                <span class="future-room-check" aria-hidden="true">✓</span>
+            </button>
+
+            <button
+                class="future-room-card"
+                type="button"
+                data-room-id="rain-window"
+                data-room-title="The Rain Window"
+                data-room-icon="🌧️"
+                data-room-message="Vaazhkai baaramaa thonumbodhellaam, namma inga utkaarndhu mazhai sathatha ketpom. Endha puyal vandhaalum, un idhayamo en idhayamo adhai thaniyaa thaanga vendiyadhillainu ninaichukuvom."
+                aria-expanded="false"
+            >
+                <span class="future-door-stage">
+                    <span class="future-room-inside">
+                        <span class="future-inside-icon">🌧️</span>
+                        <strong>Safe Through Every Storm</strong>
+                        <small>You will never face it alone</small>
+                    </span>
+
+                    <span class="future-room-door door-teal">
+                        <span class="future-door-number">04</span>
+                        <span class="future-door-panels" aria-hidden="true">
+                            <i></i><i></i><i></i><i></i>
+                        </span>
+                        <span class="future-door-sign">Rain Window</span>
+                        <span class="future-door-knob" aria-hidden="true"></span>
+                    </span>
+                </span>
+
+                <span class="future-door-instruction">Tap to open</span>
+                <span class="future-room-check" aria-hidden="true">✓</span>
+            </button>
+
+            <button
+                class="future-room-card"
+                type="button"
+                data-room-id="celebration-room"
+                data-room-title="The Celebration Room"
+                data-room-icon="🎉"
+                data-room-message="Indha arai pirandhanaalum thirumana naalum kondaada mattum illa. Namma dhairiyamaa kadandhu vandha naatkalaiyum, aarippona kaayangalaiyum, chinna chinna vettrigalaiyum, “kaivida maattom”nu namma urudhiyaa nikkura ovvoru tharunathaiyum kondaada dhaan."
+                aria-expanded="false"
+            >
+                <span class="future-door-stage">
+                    <span class="future-room-inside">
+                        <span class="future-inside-icon">🎉</span>
+                        <strong>Every Win Matters</strong>
+                        <small>I will always cheer for you</small>
+                    </span>
+
+                    <span class="future-room-door door-gold">
+                        <span class="future-door-number">05</span>
+                        <span class="future-door-panels" aria-hidden="true">
+                            <i></i><i></i><i></i><i></i>
+                        </span>
+                        <span class="future-door-sign">Celebration Room</span>
+                        <span class="future-door-knob" aria-hidden="true"></span>
+                    </span>
+                </span>
+
+                <span class="future-door-instruction">Tap to open</span>
+                <span class="future-room-check" aria-hidden="true">✓</span>
+            </button>
+
+            <button
+                class="future-room-card"
+                type="button"
+                data-room-id="growing-garden"
+                data-room-title="The Growing Garden"
+                data-room-icon="🌿"
+                data-room-message="Namma inga konjam konjamaa valaruvom—innum porumaiyoda, innum unmaiyoda, innum nammaagave. Namma kaadhal verum unarvaa mattum irukkaadhu; adhu ovvoru naalum namma akkaraiyoda paathu valarkkura onnaa irukkum."
+                aria-expanded="false"
+            >
+                <span class="future-door-stage">
+                    <span class="future-room-inside">
+                        <span class="future-inside-icon">🌿</span>
+                        <strong>Grow With Me</strong>
+                        <small>One beautiful day at a time</small>
+                    </span>
+
+                    <span class="future-room-door door-green">
+                        <span class="future-door-number">06</span>
+                        <span class="future-door-panels" aria-hidden="true">
+                            <i></i><i></i><i></i><i></i>
+                        </span>
+                        <span class="future-door-sign">Growing Garden</span>
+                        <span class="future-door-knob" aria-hidden="true"></span>
+                    </span>
+                </span>
+
+                <span class="future-door-instruction">Tap to open</span>
+                <span class="future-room-check" aria-hidden="true">✓</span>
+            </button>
+        </div>
+
+        <div
+            id="futureRoomMessage"
+            class="future-room-message"
+            aria-live="polite"
+        >
+            <span id="futureRoomMessageIcon" aria-hidden="true">🔑</span>
+
+            <div>
+                <small>A promise is waiting behind every door</small>
+                <h2 id="futureRoomMessageTitle">Choose your first room</h2>
+                <p id="futureRoomMessageText">
+                    Tap any door above. I left a different piece of our future
+                    behind each one.
+                </p>
+            </div>
+        </div>
+
+        <div id="futureHomeComplete" class="future-home-complete" hidden>
+            <span aria-hidden="true">🏠❤️</span>
+            <h2>Our Future Home Is Full Of Love</h2>
+            <p>
+                A house is built with walls and doors. Our home will be built
+                with patience, laughter, safety, dreams, and choosing each
+                other every single day.
+            </p>
+        </div>
+    </div>
+
+    <button
+    id="futureHomePlaylistBtn"
+    class="future-home-next-btn page-next-btn"
+    data-love-target="page-love-playlist"
+    type="button"
+>
+    Open Our Love Radio 🎧
+</button>
+
+</section>
+
+
+
+
+<!-- =============================================================
+     ADD THIS BUTTON INSIDE #futureHomeComplete AFTER ITS <p>:
+
+     <button
+         id="futureHomePlaylistBtn"
+         class="future-home-next-btn page-next-btn"
+         data-love-target="page-love-playlist"
+         type="button"
+     >
+         Open Our Love Radio 🎧
+     </button>
+============================================================= -->
+
+<!-- ================= PAGE: LOVE RADIO PLAYLIST ================= -->
+
+<section
+    id="page-love-playlist"
+    class="page love-page love-radio-page"
+    aria-labelledby="loveRadioTitle"
+>
+    <div class="love-radio-background" aria-hidden="true">
+        <span class="radio-note note-one">♪</span>
+        <span class="radio-note note-two">♫</span>
+        <span class="radio-note note-three">♬</span>
+        <span class="radio-note note-four">♪</span>
+        <span class="radio-wave wave-one"></span>
+        <span class="radio-wave wave-two"></span>
+    </div>
+
+    <div class="love-radio-shell">
+        <p class="love-radio-eyebrow">Love FM · Broadcasting Only For You</p>
+
+        <h1 id="loveRadioTitle">Our Ridiculously Romantic Radio 📻</h1>
+
+        <p class="love-radio-intro">
+            Six songs, too many feelings, and absolutely no guarantee that
+            my dance moves will be safe for public viewing. 😂
+        </p>
+
+        <div class="love-radio-console">
+            <div class="love-radio-player-visual">
+                <button
+                    id="loveRadioVinylButton"
+                    class="love-radio-vinyl-button"
+                    type="button"
+                    aria-label="Play or pause current song"
+                >
+                    <span class="love-radio-vinyl" aria-hidden="true">
+                        <span class="vinyl-groove groove-one"></span>
+                        <span class="vinyl-groove groove-two"></span>
+                        <span class="vinyl-label">
+                            <span id="loveRadioVinylEmoji">💗</span>
+                            <small>LOVE FM</small>
+                        </span>
+                    </span>
+
+                    <span class="love-radio-needle" aria-hidden="true">
+                        <i></i>
+                    </span>
+                </button>
+
+                <div class="love-radio-equalizer" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="love-radio-player-info">
+                <div class="love-radio-live-badge">
+                    <span></span>
+                    LIVE FROM OUR HEARTS
+                </div>
+
+                <p id="loveRadioNowPlayingLabel" class="love-radio-now-label">
+                    Select a cassette to begin
+                </p>
+
+                <h2 id="loveRadioNowTitle">Our Love Radio</h2>
+
+                <p id="loveRadioNowArtist" class="love-radio-now-artist">
+                    DJ Ram &amp; DJ Raji
+                </p>
+
+                <div id="loveRadioFunnyMessage" class="love-radio-funny-message">
+                    🎙️ The studio is ready. The singer is still pretending to be shy.
+                </div>
+
+                <div class="love-radio-seek-wrap">
+                    <input
+                        id="loveRadioSeek"
+                        class="love-radio-range love-radio-seek"
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        step="0.1"
+                        aria-label="Song progress"
+                    >
+
+                    <div class="love-radio-time">
+                        <span id="loveRadioCurrentTime">0:00</span>
+                        <span id="loveRadioDuration">0:00</span>
+                    </div>
+                </div>
+
+                <div class="love-radio-controls">
+                    <button
+                        id="loveRadioShuffleBtn"
+                        class="radio-control-btn radio-small-control"
+                        type="button"
+                        aria-label="Toggle shuffle"
+                        aria-pressed="false"
+                    >
+                        🔀
+                    </button>
+
+                    <button
+                        id="loveRadioPreviousBtn"
+                        class="radio-control-btn"
+                        type="button"
+                        aria-label="Previous song"
+                    >
+                        ⏮
+                    </button>
+
+                    <button
+                        id="loveRadioPlayBtn"
+                        class="radio-control-btn radio-main-control"
+                        type="button"
+                        aria-label="Play current song"
+                    >
+                        <span id="loveRadioPlayIcon">▶</span>
+                    </button>
+
+                    <button
+                        id="loveRadioNextBtn"
+                        class="radio-control-btn"
+                        type="button"
+                        aria-label="Next song"
+                    >
+                        ⏭
+                    </button>
+
+                    <button
+                        id="loveRadioMuteBtn"
+                        class="radio-control-btn radio-small-control"
+                        type="button"
+                        aria-label="Mute or unmute"
+                        aria-pressed="false"
+                    >
+                        🔊
+                    </button>
+                </div>
+
+                <div class="love-radio-volume-wrap">
+                    <span aria-hidden="true">🔉</span>
+
+                    <input
+                        id="loveRadioVolume"
+                        class="love-radio-range"
+                        type="range"
+                        min="0"
+                        max="1"
+                        value="0.75"
+                        step="0.01"
+                        aria-label="Volume"
+                    >
+
+                    <span aria-hidden="true">🔊</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="love-radio-list-header">
+            <div>
+                <small>RAM + RAJI EXCLUSIVE COLLECTION</small>
+                <h2>Choose Your Cassette</h2>
+            </div>
+
+            <div class="love-radio-listened-status" aria-live="polite">
+                <span id="loveRadioListenedCount">0 / 6 listened</span>
+                <span class="love-radio-listened-track">
+                    <i id="loveRadioListenedBar"></i>
+                </span>
+            </div>
+        </div>
+
+        <div id="loveRadioTrackList" class="love-radio-track-list">
+            <button
+                class="love-radio-track"
+                type="button"
+                data-song-index="0"
+                data-title="Our First Chapter"
+                data-artist="The Song That Started Everything"
+                data-src="Neelothi Sirai.mp3"
+                data-emoji="💗"
+                data-accent="#ff5f91"
+            >
+                <span class="love-track-number">01</span>
+                <span class="love-radio-cassette cassette-pink" aria-hidden="true">
+                    <span class="cassette-label">FIRST CHAPTER</span>
+                    <span class="cassette-window">
+                        <i></i><b></b><i></i>
+                    </span>
+                    <span class="cassette-bottom"></span>
+                </span>
+                <span class="love-track-copy">
+                    <strong>Our First Chapter</strong>
+                    <small>The song that started everything</small>
+                </span>
+                <span class="love-track-mood">Blushing Level: 100%</span>
+                <span class="love-track-action">▶</span>
+                <span class="love-track-listened" aria-hidden="true">✓</span>
+            </button>
+
+            <button
+                class="love-radio-track"
+                type="button"
+                data-song-index="1"
+                data-title="Kitchen Concert"
+                data-artist="Featuring One Spoon As A Microphone"
+                data-src="_Laali_Lalli_Tamil_Love_Song_Ringtone_(by Fringster.com).mp3"
+                data-emoji="🍳"
+                data-accent="#ffb84f"
+            >
+                <span class="love-track-number">02</span>
+                <span class="love-radio-cassette cassette-orange" aria-hidden="true">
+                    <span class="cassette-label">KITCHEN MIX</span>
+                    <span class="cassette-window">
+                        <i></i><b></b><i></i>
+                    </span>
+                    <span class="cassette-bottom"></span>
+                </span>
+                <span class="love-track-copy">
+                    <strong>Kitchen Concert</strong>
+                    <small>One spoon, two terrible singers</small>
+                </span>
+                <span class="love-track-mood">Chef Rating: Questionable</span>
+                <span class="love-track-action">▶</span>
+                <span class="love-track-listened" aria-hidden="true">✓</span>
+            </button>
+
+            <button
+                class="love-radio-track"
+                type="button"
+                data-song-index="2"
+                data-title="Rainy Ride"
+                data-artist="Window Seat Reserved For My Azhagi"
+                data-src="_Azhakooril_Poothave_Tamil_Song_Ringtone_(by Fringster.com).mp3"
+                data-emoji="🌧️"
+                data-accent="#61c5e8"
+            >
+                <span class="love-track-number">03</span>
+                <span class="love-radio-cassette cassette-blue" aria-hidden="true">
+                    <span class="cassette-label">RAINY RIDE</span>
+                    <span class="cassette-window">
+                        <i></i><b></b><i></i>
+                    </span>
+                    <span class="cassette-bottom"></span>
+                </span>
+                <span class="love-track-copy">
+                    <strong>Rainy Ride</strong>
+                    <small>Window seat reserved for my Azhagi</small>
+                </span>
+                <span class="love-track-mood">Weather: Extra Romantic</span>
+                <span class="love-track-action">▶</span>
+                <span class="love-track-listened" aria-hidden="true">✓</span>
+            </button>
+
+            <button
+                class="love-radio-track"
+                type="button"
+                data-song-index="3"
+                data-title="Fight Over, Hug Now"
+                data-artist="The Official Patch-Up Anthem"
+                data-src="Oh My Kadavule - Kadhaippoma Song.mp3x"
+                data-emoji="😤"
+                data-accent="#b98cff"
+            >
+                <span class="love-track-number">04</span>
+                <span class="love-radio-cassette cassette-purple" aria-hidden="true">
+                    <span class="cassette-label">PATCH-UP MIX</span>
+                    <span class="cassette-window">
+                        <i></i><b></b><i></i>
+                    </span>
+                    <span class="cassette-bottom"></span>
+                </span>
+                <span class="love-track-copy">
+                    <strong>Fight Over, Hug Now</strong>
+                    <small>The official patch-up anthem</small>
+                </span>
+                <span class="love-track-mood">Ego Muted Successfully</span>
+                <span class="love-track-action">▶</span>
+                <span class="love-track-listened" aria-hidden="true">✓</span>
+            </button>
+
+            <button
+                class="love-radio-track"
+                type="button"
+                data-song-index="4"
+                data-title="Midnight Call"
+                data-artist="Five More Minutes That Became Two Hours"
+                data-src="Odum Neram Niruthi - Vaa Senthaazhini _ Tamil Song.mp3"
+                data-emoji="🌙"
+                data-accent="#778cff"
+            >
+                <span class="love-track-number">05</span>
+                <span class="love-radio-cassette cassette-indigo" aria-hidden="true">
+                    <span class="cassette-label">12:00 AM</span>
+                    <span class="cassette-window">
+                        <i></i><b></b><i></i>
+                    </span>
+                    <span class="cassette-bottom"></span>
+                </span>
+                <span class="love-track-copy">
+                    <strong>Midnight Call</strong>
+                    <small>Five minutes that became two hours</small>
+                </span>
+                <span class="love-track-mood">Sleep Schedule: Destroyed</span>
+                <span class="love-track-action">▶</span>
+                <span class="love-track-listened" aria-hidden="true">✓</span>
+            </button>
+
+            <button
+                class="love-radio-track"
+                type="button"
+                data-song-index="5"
+                data-title="Forever Finale"
+                data-artist="Plot Twist: Our Story Never Actually Ends"
+                data-src="poraney.mp3"
+                data-emoji="💍"
+                data-accent="#f6cc72"
+            >
+                <span class="love-track-number">06</span>
+                <span class="love-radio-cassette cassette-gold" aria-hidden="true">
+                    <span class="cassette-label">FOREVER SIDE A</span>
+                    <span class="cassette-window">
+                        <i></i><b></b><i></i>
+                    </span>
+                    <span class="cassette-bottom"></span>
+                </span>
+                <span class="love-track-copy">
+                    <strong>Forever Finale</strong>
+                    <small>Plot twist: our story never ends</small>
+                </span>
+                <span class="love-track-mood">Replay Value: Infinite</span>
+                <span class="love-track-action">▶</span>
+                <span class="love-track-listened" aria-hidden="true">✓</span>
+            </button>
+        </div>
+
+        <!-- Custom song fields -->
+        <details id="loveRadioCustomizer" class="love-radio-customizer">
+            <summary>
+                <span class="love-customizer-icon" aria-hidden="true">🎛️</span>
+                <span>
+                    <strong>Add My Custom Songs</strong>
+                    <small>Change any cassette's title, artist and music</small>
+                </span>
+                <span class="love-customizer-arrow" aria-hidden="true">⌄</span>
+            </summary>
+
+            <form id="loveRadioCustomForm" class="love-radio-custom-form">
+                <div class="love-custom-song-fields">
+                    <label class="love-custom-field">
+                        <span>Cassette To Change</span>
+                        <select id="loveCustomTrackSelect" required>
+                            <option value="0">Cassette 01</option>
+                            <option value="1">Cassette 02</option>
+                            <option value="2">Cassette 03</option>
+                            <option value="3">Cassette 04</option>
+                            <option value="4">Cassette 05</option>
+                            <option value="5">Cassette 06</option>
+                        </select>
+                    </label>
+
+                    <label class="love-custom-field">
+                        <span>Song Title</span>
+                        <input id="loveCustomSongTitle" type="text"
+                            placeholder="Example: Perfect" maxlength="70" required>
+                    </label>
+
+                    <label class="love-custom-field">
+                        <span>Artist / Special Note</span>
+                        <input id="loveCustomSongArtist" type="text"
+                            placeholder="Example: Ed Sheeran · Our favorite song"
+                            maxlength="100" required>
+                    </label>
+
+                    <label class="love-custom-field">
+                        <span>Cassette Emoji</span>
+                        <input id="loveCustomSongEmoji" type="text"
+                            placeholder="❤️" maxlength="8">
+                    </label>
+
+                    <label class="love-custom-field love-custom-source-field">
+                        <span>Audio File Path Or Direct URL</span>
+                        <input id="loveCustomSongSource" type="text"
+                            placeholder="songs/my-favorite-song.mp3">
+                        <small>
+                            For your published site, put the MP3 in the songs
+                            folder and enter its exact path here.
+                        </small>
+                    </label>
+
+                    <label class="love-custom-field love-custom-file-field">
+                        <span>Or Choose An Audio File Now</span>
+                        <input id="loveCustomSongFile" type="file"
+                            accept="audio/*,.mp3,.m4a,.wav,.ogg">
+                        <small>
+                            File selection is for previewing on this device and
+                            does not remain after a page refresh.
+                        </small>
+                    </label>
+                </div>
+
+                <div class="love-custom-actions">
+                    <button id="loveCustomApplyBtn" type="submit">
+                        Save This Cassette 💾
+                    </button>
+                    <button id="loveCustomResetBtn" type="button">
+                        Reset Cassette ↺
+                    </button>
+                </div>
+
+                <p id="loveCustomStatus" class="love-custom-status" aria-live="polite">
+                    Select a cassette and enter your song details.
+                </p>
+            </form>
+        </details>
+
+        <div id="loveRadioComplete" class="love-radio-complete" hidden>
+            <span aria-hidden="true">🎧❤️</span>
+            <h2>You Listened To Our Entire Love Album!</h2>
+            <p>
+                Achievement unlocked: Certified Romantic DJ. Side effects may
+                include smiling at the screen and missing me approximately
+                seventeen times more than usual. 😂
+            </p>
+        </div>
+
+        <audio id="lovePlaylistAudio" preload="metadata"></audio>
+    </div>
+</section>
+
+<!-- ================= PAGE: FOREVER LETTER ================= -->
+
+<section
+    id="page-forever-letter"
+    class="page love-page forever-letter-page"
+    aria-labelledby="foreverLetterTitle"
+    aria-hidden="true"
+>
+    <div class="forever-cosmos" aria-hidden="true">
+        <span class="forever-aurora aurora-one"></span>
+        <span class="forever-aurora aurora-two"></span>
+
+        <span class="forever-star star-one">✦</span>
+        <span class="forever-star star-two">✧</span>
+        <span class="forever-star star-three">✦</span>
+        <span class="forever-star star-four">✧</span>
+        <span class="forever-star star-five">✦</span>
+        <span class="forever-star star-six">✧</span>
+        <span class="forever-star star-seven">✦</span>
+        <span class="forever-star star-eight">✧</span>
+
+        <span class="forever-shooting-star shooting-one"></span>
+        <span class="forever-shooting-star shooting-two"></span>
+
+        <span class="forever-orbit orbit-one"></span>
+        <span class="forever-orbit orbit-two"></span>
+    </div>
+
+    <div
+        id="foreverHeartLayer"
+        class="forever-heart-layer"
+        aria-hidden="true"
+    ></div>
+
+    <div class="forever-letter-shell">
+
+        <header class="forever-letter-heading">
+
+            <p class="forever-letter-eyebrow">
+                A Letter From My Heart · To My Forever
+            </p>
+
+            <h1 id="foreverLetterTitle">
+                If Forever Had A Beginning,
+                <span>It Would Begin With You.</span>
+            </h1>
+
+            <p class="forever-letter-intro">
+                Every page before this was a surprise. This one is simply me,
+                telling you what my heart has been trying to say all along.
+            </p>
+
+        </header>
+
+        <!-- Clickable envelope -->
+
+        <div
+            id="foreverEnvelopeStage"
+            class="forever-envelope-stage"
+        >
+            <button
+                id="foreverEnvelopeButton"
+                class="forever-envelope-button"
+                type="button"
+                aria-label="Open my forever letter"
+                aria-expanded="false"
+                aria-controls="foreverLetterContent"
+            >
+                <span
+                    class="forever-envelope-shadow"
+                    aria-hidden="true"
+                ></span>
+
+                <span
+                    class="forever-envelope-body"
+                    aria-hidden="true"
+                >
+                    <span class="forever-envelope-back"></span>
+
+                    <span class="forever-envelope-letter-preview">
+                        <small>To My Azhagi</small>
+                        <i>♥</i>
+                    </span>
+
+                    <span class="forever-envelope-flap"></span>
+                    <span class="forever-envelope-front-left"></span>
+                    <span class="forever-envelope-front-right"></span>
+                    <span class="forever-envelope-front-bottom"></span>
+
+                    <span class="forever-wax-seal">
+                        <b>R</b>
+                        <i>♥</i>
+                    </span>
+                </span>
+
+                <span
+                    id="foreverEnvelopeInstruction"
+                    class="forever-envelope-instruction"
+                >
+                    Tap The Seal To Open My Heart
+                </span>
+            </button>
+        </div>
+
+        <!-- Main letter -->
+
+        <article
+            id="foreverLetterContent"
+            class="forever-letter-paper"
+            aria-live="polite"
+            hidden
+        >
+            <div
+                class="forever-paper-glow"
+                aria-hidden="true"
+            ></div>
+
+            <div class="forever-paper-header">
+                <span class="forever-paper-date">
+                    Our Forever · Chapter One
+                </span>
+
+                <span
+                    class="forever-paper-heart"
+                    aria-hidden="true"
+                >
+                    ♥
+                </span>
+            </div>
+
+            <p class="forever-dear">
+                My Azhagi,
+            </p>
+
+            <div class="forever-letter-copy">
+
+                <p class="forever-letter-paragraph">
+                    I made this little website because sometimes a simple
+                    <em>“I love you”</em> doesn't feel big enough for everything
+                    I want to tell you.
+                </p>
+
+                <p class="forever-letter-paragraph">
+                    You became a part of my ordinary days, my plans, my
+                    laughter, my worries and eventually,
+                    <strong>my future.</strong>
+                </p>
+
+                <p class="forever-letter-paragraph">
+                    I don't expect our life to be perfect. I just want it to
+                    be <strong>ours.</strong> I want the silly fights, random
+                    food cravings, late-night conversations, difficult days,
+                    celebrations and ordinary mornings in between.
+                </p>
+
+                <p class="forever-letter-paragraph">
+                    If I get to experience those ordinary moments beside you,
+                    they will never feel ordinary to me.
+                </p>
+
+                <p
+                    class="forever-letter-paragraph
+                           forever-last-paragraph"
+                >
+                    And after everything, there is only one thing left that I
+                    want you to know.
+                </p>
+
+            </div>
+
+            <div class="forever-signature">
+                <span>Always yours,</span>
+                <strong>Ram ❤️</strong>
+            </div>
+
+            <button
+                id="foreverPromiseButton"
+                class="forever-promise-button"
+                type="button"
+                aria-expanded="false"
+                aria-controls="foreverPromiseReveal"
+            >
+                <span>Touch Here For My Promise</span>
+                <i aria-hidden="true">♥</i>
+            </button>
+
+            <div
+                id="foreverPromiseReveal"
+                class="forever-promise-reveal"
+                hidden
+            >
+                <span
+                    class="forever-promise-infinity"
+                    aria-hidden="true"
+                >
+                    ∞
+                </span>
+
+                <p>
+                    No matter how many pages this life has,
+                </p>
+
+                <h2>
+                    I Will Keep Choosing You.
+                </h2>
+
+                <p>
+                    In the loud days and the quiet ones. In the easy days and
+                    the difficult ones. In every ordinary morning, every dream,
+                    every lifetime and every version of forever.
+                </p>
+
+                <strong>
+                    Today. Tomorrow. Always. You. ❤️
+                </strong>
+            </div>
+
+        </article>
+
+         <!-- ALWAYS-VISIBLE NEXT PAGE BUTTON -->
+
+        <div
+            id="foreverNextPageWrap"
+            class="forever-next-page-wrap"
+        >
+            <button
+                id="foreverToHeartBtn"
+                class="forever-to-heart-btn page-next-btn"
+                data-love-target="page-hold-my-heart"
+                type="button"
+            >
+                <span>Will You Hold My Heart? ❤️</span>
+                <span aria-hidden="true">→</span>
+            </button>
+        </div>
+
+        <p class="forever-page-footnote">
+            Made with too much love, a little code and one very certain heart.
+        </p>
+
+    </div>
+</section>
+
+<!-- PAGE VISIBILITY FIX: only the active love page may be displayed -->
+<style>
+    #page-hold-my-heart:not(.active),
+    #page-boarding-pass:not(.active),
+    #page-roll-credits:not(.active) {
+        display: none !important;
+    }
+
+    #page-hold-my-heart.active,
+    #page-boarding-pass.active,
+    #page-roll-credits.active {
+        display: block;
+    }
+
+    /* Each navigation button belongs only to its own page. */
+    #page-hold-my-heart #boardingToCreditsWrap,
+    #page-hold-my-heart #boardingToCreditsBtn,
+    #page-hold-my-heart .hold-to-credits-wrap,
+    #page-hold-my-heart .hold-to-credits-btn {
+        display: none !important;
+    }
+
+    #page-boarding-pass #holdToBoardingWrap,
+    #page-boarding-pass #holdToBoardingBtn,
+    #page-boarding-pass .hold-to-boarding-wrap,
+    #page-boarding-pass .hold-to-boarding-btn {
+        display: none !important;
+    }
+</style>
+
+<!-- ================= PAGE: HOLD MY HEART ================= -->
+
+<section
+    id="page-hold-my-heart"
+    class="page love-page hold-heart-page"
+    aria-labelledby="holdHeartPageTitle"
+    aria-hidden="true"
+>
+    <div class="hold-heart-background" aria-hidden="true">
+        <span class="hold-glow glow-one"></span>
+        <span class="hold-glow glow-two"></span>
+
+        <span class="hold-pulse-ring ring-one"></span>
+        <span class="hold-pulse-ring ring-two"></span>
+        <span class="hold-pulse-ring ring-three"></span>
+
+        <span class="hold-particle particle-one">♥</span>
+        <span class="hold-particle particle-two">✦</span>
+        <span class="hold-particle particle-three">♥</span>
+        <span class="hold-particle particle-four">✦</span>
+        <span class="hold-particle particle-five">♥</span>
+        <span class="hold-particle particle-six">✦</span>
+    </div>
+
+    <div
+        id="holdHeartCelebrationLayer"
+        class="hold-heart-celebration-layer"
+        aria-hidden="true"
+    ></div>
+
+    <div class="hold-heart-shell">
+
+        <header class="hold-heart-heading">
+
+            <p class="hold-heart-eyebrow">
+                One Small Request · From One Very Attached Heart
+            </p>
+
+            <h1 id="holdHeartPageTitle">
+                Will You Hold
+                <span>My Heart?</span>
+            </h1>
+
+            <p class="hold-heart-intro">
+                Not just for a second. Press it, hold it gently and let it
+                feel what it already knows—that it is safest when it is
+                with you.
+            </p>
+
+        </header>
+
+        <div class="hold-heart-chamber">
+
+            <div
+                class="hold-heart-status-wrap"
+                aria-live="polite"
+            >
+                <span
+                    class="hold-heart-live-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <p id="holdHeartStatus">
+                    Waiting for your touch, Azhagi ❤️
+                </p>
+            </div>
+
+            <div class="hold-heart-interaction">
+
+                <span
+                    class="hold-cupped-hand hand-left"
+                    aria-hidden="true"
+                >
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+
+                <button
+                    id="holdHeartButton"
+                    class="hold-heart-button"
+                    type="button"
+                    aria-label="Press and hold my heart for five seconds"
+                    aria-describedby="holdHeartInstruction"
+                    aria-pressed="false"
+                >
+                    <svg
+                        class="hold-progress-ring"
+                        viewBox="0 0 150 150"
+                        aria-hidden="true"
+                    >
+                        <circle
+                            class="hold-progress-ring-track"
+                            cx="75"
+                            cy="75"
+                            r="64"
+                        ></circle>
+
+                        <circle
+                            id="holdProgressCircle"
+                            class="hold-progress-ring-value"
+                            cx="75"
+                            cy="75"
+                            r="64"
+                        ></circle>
+                    </svg>
+
+                    <span
+                        class="hold-heart-core"
+                        aria-hidden="true"
+                    >
+                        <svg viewBox="0 0 100 92">
+                            <path
+                                d="M50 88C45 82 8 57 8 29C8 12 20 3 34 3C43 3 48 8 50 14C53 8 58 3 67 3C81 3 93 12 93 29C93 57 56 82 50 88Z"
+                            ></path>
+                        </svg>
+
+                        <span class="hold-heart-shine"></span>
+                        <span class="hold-heart-beat-line"></span>
+                    </span>
+
+                    <span
+                        id="holdProgressText"
+                        class="hold-progress-text"
+                    >
+                        HOLD
+                    </span>
+                </button>
+
+                <span
+                    class="hold-cupped-hand hand-right"
+                    aria-hidden="true"
+                >
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+
+            </div>
+
+            <p
+                id="holdHeartInstruction"
+                class="hold-heart-instruction"
+            >
+                Press and keep holding for 5 seconds
+                <span>·</span>
+                Keyboard: hold Space or Enter
+            </p>
+
+            <div
+                class="hold-heart-milestones"
+                aria-hidden="true"
+            >
+                <span
+                    id="holdMilestoneOne"
+                    class="hold-milestone is-active"
+                >
+                    <i>01</i>
+                    Touch
+                </span>
+
+                <span
+                    id="holdMilestoneTwo"
+                    class="hold-milestone"
+                >
+                    <i>02</i>
+                    Trust
+                </span>
+
+                <span
+                    id="holdMilestoneThree"
+                    class="hold-milestone"
+                >
+                    <i>03</i>
+                    Forever
+                </span>
+            </div>
+
+        </div>
+
+        <div
+            id="holdHeartPromise"
+            class="hold-heart-promise"
+            aria-live="polite"
+            hidden
+        >
+            <div class="hold-promise-ribbon">
+                HEART SAFELY DELIVERED
+            </div>
+
+            <span
+                class="hold-promise-icon"
+                aria-hidden="true"
+            >
+                🤲❤️
+            </span>
+
+            <p class="hold-promise-small-title">
+                Lifetime Keeper Access Granted To
+            </p>
+
+            <h2>My Azhagi</h2>
+
+            <p class="hold-promise-main-message">
+                En heart-ah nee perfect-ah hold pannanum-nu avasiyam illa. En brave days-la, worried days-la, en silence-la, 
+                en sirippula, life uruvaakkura ennoda ovvoru version-layum adha gentle-ah hold pannina podhum. Unkooda 
+                irukkumbodhu, en heart summa beat mattum pannala—adhu thanoda veetla irukkura maadhiri feel pannudhu. ❤️
+            </p>
+
+            <blockquote>
+                Un kaigal serum idamellam,
+                en idhayam thanakkaana veettai kandukollum…” ❤️
+            </blockquote>
+
+            <div class="hold-heart-terms">
+
+                <strong>
+                    Lifetime benefits include:
+                </strong>
+
+                <span>∞ Unlimited hugs</span>
+
+                <span>
+                    ∞ Emergency nerathula unlimited forehead kisses 😘
+                </span>
+
+                <span>
+                    ∞ Bed-la ennoda side-ah thirudikkira full permission unakku mattum ❤️
+                </span>
+
+                <span>
+                    ∞ Eppavume unna mattume thirumba thirumba choose pannura ore idhayam ❤️
+                </span>
+
+            </div>
+
+            <p class="hold-promise-final-line">
+                Handle with love. Keep forever. No returns accepted. 😂❤️
+            </p>
+
+            <button
+                id="holdHeartAgainButton"
+                class="hold-heart-again-button"
+                type="button"
+            >
+                Hold My Heart Again ↺
+            </button>
+
+        </div>
+
+        <p class="hold-heart-footnote">
+            Warning: this heart has already memorized your name.
+        </p>
+
+    </div>
+
+    <div 
+         id="holdToBoardingWrap"
+          class="hold-to-boarding-wrap"
+          
+        >
+
+    <button
+        id="holdToBoardingBtn"
+        class="hold-to-boarding-btn page-next-btn"
+        data-love-target="page-boarding-pass"
+        type="button"
+    >
+        <span>
+            Board Our Forever Flight ✈️
+        </span>
+
+        <span class="hold-to-boarding-arrow" 
+        aria-hidden="true"
+        >
+           →
+        </span>
+
+    </button>
+</div>
+
+
+</section>
+
+
+<!-- ================================================================
+     PAGE: BOARDING PASS TO FOREVER
+     Paste this section AFTER the Hold My Heart section in index.html.
+     ================================================================ -->
+
+<section
+    id="page-boarding-pass"
+    class="page love-page boarding-pass-page"
+    aria-labelledby="boardingPageTitle"
+    aria-hidden="true"
+>
+    <div class="boarding-sky" aria-hidden="true">
+        <span class="boarding-cloud cloud-a"></span>
+        <span class="boarding-cloud cloud-b"></span>
+        <span class="boarding-cloud cloud-c"></span>
+        <span class="boarding-star star-a">✦</span>
+        <span class="boarding-star star-b">✦</span>
+        <span class="boarding-star star-c">♥</span>
+        <span class="boarding-star star-d">✦</span>
+        <span class="boarding-star star-e">♥</span>
+    </div>
+
+    <div
+        id="boardingCelebrationLayer"
+        class="boarding-celebration-layer"
+        aria-hidden="true"
+    ></div>
+
+    <div class="boarding-shell">
+        <header class="boarding-heading">
+            <div class="boarding-airline-badge" aria-hidden="true">
+                <span>♥</span>
+                <strong>HEARTLINE</strong>
+                <small>AIRWAYS</small>
+            </div>
+
+            <p class="boarding-eyebrow">One Way · Rendu Hearts · No Return</p>
+
+            <h1 id="boardingPageTitle">
+                Boarding Pass To
+                <span>Forever</span>
+            </h1>
+
+            <p class="boarding-intro">
+                Chennai-la aarambicha en route-um, Rajapalayam-la
+                aarambicha un route-um… ippo ore destination-ku
+                ready. Ticket confirm aaganumna un stamp mattum dhaan baaki,
+                Azhagi. ❤️
+            </p>
+        </header>
+
+        <div id="foreverBoardingPass" class="forever-boarding-pass">
+            <div class="boarding-pass-main">
+                <div class="boarding-pass-topline">
+                    <div>
+                        <span class="boarding-wing" aria-hidden="true">♥</span>
+                        <p>HEARTLINE AIRWAYS</p>
+                    </div>
+                    <strong>BOARDING PASS</strong>
+                </div>
+
+                <div class="boarding-route-map" aria-label="Chennai and Rajapalayam joining at Together Forever">
+                    <div class="route-place route-chennai">
+                        <strong>MAA</strong>
+                        <span>Chennai</span>
+                        <small>Ram's Hometown</small>
+                    </div>
+
+                    <div class="route-flight-path" aria-hidden="true">
+                        <span class="route-line route-line-left"></span>
+                        <span class="route-line route-line-right"></span>
+                        <span class="route-heart">♥</span>
+                        <span class="route-plane">✈</span>
+                    </div>
+
+                    <div class="route-place route-rajapalayam">
+                        <strong>RJP</strong>
+                        <span>Rajapalayam</span>
+                        <small>Raji's Hometown</small>
+                    </div>
+
+                    <div class="route-destination">
+                        <small>DESTINATION</small>
+                        <strong>∞</strong>
+                        <span>Together, Forever</span>
+                    </div>
+                </div>
+
+                <p class="boarding-route-note">
+                    * RJP is namma special love-code — airport code illa,
+                    heart-ku mattum puriyura code. 😌❤️
+                </p>
+
+                <div class="boarding-ticket-grid">
+                    <div class="boarding-ticket-field field-passengers">
+                        <span>PASSENGERS</span>
+                        <strong>Ram ❤️ Raji</strong>
+                    </div>
+
+                    <div class="boarding-ticket-field">
+                        <span>FLIGHT</span>
+                        <strong>LOVE 1111</strong>
+                    </div>
+
+                    <div class="boarding-ticket-field">
+                        <span>DATE</span>
+                        <strong>11 NOV 2026</strong>
+                    </div>
+
+                    <div class="boarding-ticket-field">
+                        <span>GATE</span>
+                        <strong>HEART</strong>
+                    </div>
+
+                    <div class="boarding-ticket-field">
+                        <span>SEATS</span>
+                        <strong>SIDE BY SIDE</strong>
+                    </div>
+
+                    <div class="boarding-ticket-field">
+                        <span>CLASS</span>
+                        <strong>FOREVER</strong>
+                    </div>
+
+                    <div class="boarding-ticket-field field-baggage">
+                        <span>BAGGAGE</span>
+                        <strong>Memories · Unlimited</strong>
+                    </div>
+                </div>
+
+                <div class="boarding-love-conditions">
+                    <span>✓ Silly fights allowed</span>
+                    <span>✓ Midnight snacks included</span>
+                    <span>✓ Unlimited hugs onboard</span>
+                </div>
+
+                <div
+                    id="boardingApprovalStamp"
+                    class="boarding-approval-stamp"
+                    aria-hidden="true"
+                >
+                    <span>TOGETHER</span>
+                    <strong>APPROVED</strong>
+                    <small>VALID FOR ONE LIFETIME</small>
+                </div>
+            </div>
+
+            <aside class="boarding-pass-stub" aria-label="Boarding pass ticket stub">
+                <p>HEARTLINE</p>
+                <span class="stub-heart" aria-hidden="true">♥</span>
+
+                <div>
+                    <small>FROM</small>
+                    <strong>MAA + RJP</strong>
+                </div>
+
+                <div>
+                    <small>TO</small>
+                    <strong>FOREVER</strong>
+                </div>
+
+                <div>
+                    <small>SEAT</small>
+                    <strong>US</strong>
+                </div>
+
+                <div class="boarding-barcode" aria-hidden="true"></div>
+                <small class="boarding-code">LOVE-RAM-RAJI-1111</small>
+            </aside>
+        </div>
+
+        <div class="boarding-stamp-station">
+            <div class="boarding-status-line" aria-live="polite">
+                <span id="boardingStatusDot" aria-hidden="true"></span>
+                <p id="boardingStatus">
+                    Stamp illa-na boarding allowed illa, Azhagi. 😂❤️
+                </p>
+            </div>
+
+            <button
+                id="boardingStampButton"
+                class="boarding-stamp-button"
+                type="button"
+                aria-describedby="boardingStampHint"
+            >
+                <span class="stamp-button-handle" aria-hidden="true">
+                    <i></i>
+                </span>
+                <span class="stamp-button-base">
+                    <strong>STAMP TO BECOME TOGETHER</strong>
+                    <small>Raji's approval required ❤️</small>
+                </span>
+            </button>
+
+            <p id="boardingStampHint" class="boarding-stamp-hint">
+                Oru click-la rendu routes, ore life-a maaridum ✨
+            </p>
+        </div>
+
+        <div
+            id="boardingForeverMessage"
+            class="boarding-forever-message"
+            aria-live="polite"
+            hidden
+        >
+            <span class="boarding-message-icon" aria-hidden="true">💞</span>
+            <p class="boarding-message-kicker">BOARDING CONFIRMED</p>
+            <h2>Official-ah “Namma” Aayittom!</h2>
+
+            <p>
+                Chennai-la valarndha en vaazhkaiyum, Rajapalayam-la azhaga
+                valarndha un ulagammum, ippolendhu rendu vera route illa.
+                Namma rendu perukkum ore ticket, ore seat, ore destination—
+                <strong>namma life.</strong>
+            </p>
+
+            <p>
+                Un kooda travel panna destination mukkiyam illa; nee en
+                pakkathula irundha ovvoru journey-um enakku forever dhaan.
+                Vazhi konjam rough-a irundhaalum, un kaiya pidichuttu naan
+                varuven. Nee tired-a irundha naan window seat kuduppen… aana
+                snacks mattum share pannanum. 😂❤️
+            </p>
+
+            <blockquote>
+                “Rendu hometown. Rendu stories. Oru ticket. Oru forever.”
+            </blockquote>
+
+            <div class="boarding-confirmation-tags">
+                <span>STATUS: TOGETHER</span>
+                <span>VALIDITY: LIFETIME</span>
+                <span>DESTINATION: EACH OTHER</span>
+            </div>
+
+            <p class="boarding-no-cancel">
+                Cancellation: Not available · Refund: Unlimited hugs only
+                😂❤️
+            </p>
+
+            <button
+                id="boardingStampAgainButton"
+                class="boarding-stamp-again-button"
+                type="button"
+            >
+                Stamp Our Ticket Again ↺
+            </button>
+        </div>
+
+        <p class="boarding-footnote">
+            Final call for passenger Raji: Ram is already waiting at Gate Heart.
+            ✈️❤️
+        </p>
+    </div>
+    <div id="boardingToCreditsWrap" class="hold-to-credits-wrap">
+    <button
+        id="boardingToCreditsBtn"
+        class="hold-to-credits-btn page-next-btn"
+        data-love-target="page-roll-credits"
+        type="button"
+    >
+        <span class="hold-credits-clapper" aria-hidden="true">
+            🎬
+        </span>
+
+        <span>
+            <small>OUR STORY DOESN'T END</small>
+            Watch Our Roll Credits
+        </span>
+
+        <span class="hold-credits-arrow" aria-hidden="true">
+            →
+        </span>
+    </button>
+</div>
+</section>
+
+
+<!-- ================= PAGE: ROLL CREDITS ================= -->
+
+<section
+    id="page-roll-credits"
+    class="page love-page roll-credits-page"
+    aria-labelledby="rollCreditsPageTitle"
+    aria-hidden="true"
+>
+    <div class="credits-cinema-background" aria-hidden="true">
+        <span class="credits-spotlight spotlight-left"></span>
+        <span class="credits-spotlight spotlight-right"></span>
+
+        <span class="credits-kolam kolam-top-left">❈</span>
+        <span class="credits-kolam kolam-top-right">❈</span>
+        <span class="credits-kolam kolam-bottom-left">❈</span>
+        <span class="credits-kolam kolam-bottom-right">❈</span>
+
+        <div
+            id="creditsPetalLayer"
+            class="credits-petal-layer"
+        ></div>
+    </div>
+
+    <div class="roll-credits-shell">
+
+        <header class="roll-credits-heading">
+            <p class="roll-credits-eyebrow">
+                The Wedding Cut · Forever Edition
+            </p>
+
+            <h1 id="rollCreditsPageTitle">
+                Namma Kadhalin
+                <span>Roll Credits</span>
+            </h1>
+
+            <p>
+                Oru padathukku credits mudivu. Aana namma story-ku
+                idhu oru pudhu beginning mattum dhaan. ❤️
+            </p>
+        </header>
+
+        <div class="credits-theatre">
+
+            <div
+                class="credits-curtain curtain-left"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="credits-curtain curtain-right"
+                aria-hidden="true"
+            ></div>
+
+            <!-- Start card -->
+
+            <div
+                id="rollCreditsIntro"
+                class="credits-intro-card"
+            >
+                <div
+                    class="credits-invitation-seal"
+                    aria-hidden="true"
+                >
+                    <span>ரா</span>
+                    <i>♥</i>
+                    <span>ரா</span>
+                </div>
+
+                <p>
+                    SRI VINAYAGAR THUNAI ·
+                    SRI SRINIVASA PERUMAL THUNAI
+                </p>
+
+                <h2>
+                    A Ramprasath &amp; Rajalakshmi Production
+                </h2>
+
+                <span class="credits-intro-date">
+                    11 · 11 · 2026
+                </span>
+
+                <p class="credits-intro-copy">
+                    Azhagi, namma love story-oda cast, crew,
+                    family, destination ellame ready. Nee start
+                    pannina dhaan indha final scene play aagum.
+                </p>
+
+                <button
+                    id="rollCreditsStartBtn"
+                    class="roll-credits-start-btn"
+                    type="button"
+                >
+                    <span aria-hidden="true">▶</span>
+                    Start Our Forever Credits
+                </button>
+            </div>
+
+            <!-- Scrolling credits -->
+
+            <div
+                id="rollCreditsViewport"
+                class="roll-credits-viewport"
+                aria-label="Scrolling wedding credits"
+                tabindex="0"
+            >
+                <div
+                    id="rollCreditsTrack"
+                    class="roll-credits-track"
+                >
+
+                    <article class="credits-block credits-opening">
+                        <p class="credits-sacred-line">ௐ</p>
+
+                        <p class="credits-small-caps">
+                            With Divine Blessings
+                        </p>
+
+                        <h2>Sri Vinayagar Thunai</h2>
+                        <h2>Sri Srinivasa Perumal Thunai</h2>
+
+                        <span class="credits-ornament">❦</span>
+                    </article>
+
+                    <article class="credits-block credits-presents">
+                        <p>HEARTLINE STUDIOS PRESENTS</p>
+
+                        <h2>Namma Kadhal</h2>
+
+                        <h3>Oru Lifetime Love Story</h3>
+
+                        <p class="credits-thanglish-line">
+                            Chennai-la irundha oru paiyanum,<br>
+                            Rajapalayam-la irundha oru azhagiyum,<br>
+                            destiny potta cutest collaboration. ❤️
+                        </p>
+                    </article>
+
+                    <article class="credits-block credits-starring">
+                        <p class="credits-role">STARRING</p>
+
+                        <div class="credits-couple-names">
+
+                            <div>
+                                <small>AS THE GROOM</small>
+
+                                <h2>S. Ramprasath</h2>
+
+                                <p>
+                                    B.Tech., IT · Software Tester
+                                </p>
+
+                                <span>
+                                    “Raji-oda permanent troublemaker” 😂
+                                </span>
+                            </div>
+
+                            <i aria-hidden="true">♥</i>
+
+                            <div>
+                                <small>AS THE BRIDE</small>
+
+                                <h2>S. Rajalakshmi</h2>
+
+                                <p>B.Sc., Physics</p>
+
+                                <span>
+                                    “Ram-oda favourite human” ❤️
+                                </span>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="credits-block credits-quote-block">
+                        <span class="credits-giant-quote">“</span>
+
+                        <blockquote>
+                            Nee en life-kulla vandhadhukku appuram,
+                            ordinary days-kooda favourite scenes-a
+                            maariduchu.
+                        </blockquote>
+
+                        <small>
+                            — Ram, completely in love
+                        </small>
+                    </article>
+
+                    <article class="credits-block credits-family">
+                        <p class="credits-role">
+                            PRODUCED WITH LOVE BY
+                        </p>
+
+                        <h3>Groom's Family</h3>
+
+                        <h2>Mr. K.B. Srinivasan</h2>
+
+                        <span>&amp;</span>
+
+                        <h2>Mrs. S. Parvathi</h2>
+
+                        <p>
+                            Avanga aasirvadham dhaan namma story-oda
+                            strongest background score. 🙏❤️
+                        </p>
+                    </article>
+
+                    <article class="credits-block credits-family">
+                        <p class="credits-role">
+                            WITH THE BLESSINGS OF
+                        </p>
+
+                        <h3>Bride's Family</h3>
+
+                        <h2>Mr. A. Muthuraj</h2>
+
+                        <span>&amp;</span>
+
+                        <h2>Mrs. Sankareswari</h2>
+
+                        <p>
+                            Avanga valartha azhagana ponnu dhaan,
+                            en vaazhkai-ku kidaicha periya gift. 💝
+                        </p>
+                    </article>
+
+                    <article class="credits-block credits-screenplay">
+                        <p class="credits-role">CREATIVE TEAM</p>
+
+                        <dl class="credits-list">
+                            <div>
+                                <dt>Story Written By</dt>
+                                <dd>Destiny</dd>
+                            </div>
+
+                            <div>
+                                <dt>Screenplay By</dt>
+                                <dd>Ram &amp; Raji</dd>
+                            </div>
+
+                            <div>
+                                <dt>Directed By</dt>
+                                <dd>Love</dd>
+                            </div>
+
+                            <div>
+                                <dt>Comedy Department</dt>
+                                <dd>Namma Mokka Jokes</dd>
+                            </div>
+
+                            <div>
+                                <dt>Action Sequences</dt>
+                                <dd>Chinna Chinna Sandai</dd>
+                            </div>
+
+                            <div>
+                                <dt>Peace Treaty</dt>
+                                <dd>One Tight Hug</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="credits-block credits-wedding-card">
+                        <p class="credits-role">
+                            THE GRAND RELEASE
+                        </p>
+
+                        <h2>Reception</h2>
+
+                        <p>
+                            Tuesday · 10 November 2026
+                        </p>
+
+                        <strong>
+                            7:00 p.m. onwards
+                        </strong>
+
+                        <span class="credits-divider">♥</span>
+
+                        <h2>Muhurtham</h2>
+
+                        <p>
+                            Wednesday · 11 November 2026
+                        </p>
+
+                        <strong>
+                            9:15 a.m. to 10:15 a.m.
+                        </strong>
+                    </article>
+
+                    <article class="credits-block credits-venue">
+                        <p class="credits-role">
+                            NOW SHOWING AT
+                        </p>
+
+                        <span
+                            class="credits-venue-icon"
+                            aria-hidden="true"
+                        >
+                            ⌂
+                        </span>
+
+                        <h2>
+                            Valluvar Vasuki<br>
+                            Thirumana Mandapam
+                        </h2>
+
+                        <h3>
+                            HVF Estate · Avadi · Chennai
+                        </h3>
+
+                        <p>
+                            Inga dhaan “naan” um “nee” um,<br>
+                            official-ah “namma” aaga porom. 💍
+                        </p>
+                    </article>
+
+                    <article class="credits-block credits-special-thanks">
+                        <p class="credits-role">
+                            WITH BEST COMPLIMENTS FROM
+                        </p>
+
+                        <h2>S. Anantha</h2>
+
+                        <p>
+                            B.Sc., Bio-Medical Science
+                        </p>
+
+                        <h3>
+                            Saveetha Medical College · Chennai
+                        </h3>
+
+                        <span class="credits-ornament">❦</span>
+                    </article>
+
+                    <article class="credits-block credits-lifetime-cast">
+                        <p class="credits-role">
+                            LIFETIME CAST &amp; CREW
+                        </p>
+
+                        <dl class="credits-list">
+                            <div>
+                                <dt>Hero</dt>
+                                <dd>Ram</dd>
+                            </div>
+
+                            <div>
+                                <dt>Heroine</dt>
+                                <dd>Raji</dd>
+                            </div>
+
+                            <div>
+                                <dt>Home</dt>
+                                <dd>Wherever We Are Together</dd>
+                            </div>
+
+                            <div>
+                                <dt>Official Language</dt>
+                                <dd>Love + Thanglish</dd>
+                            </div>
+
+                            <div>
+                                <dt>Contract Period</dt>
+                                <dd>Indha Jenmam + Ella Jenmam</dd>
+                            </div>
+
+                            <div>
+                                <dt>Renewal</dt>
+                                <dd>Automatic · Every Heartbeat</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="credits-block credits-final-dedication">
+                        <p class="credits-role">
+                            DEDICATED TO
+                        </p>
+
+                        <h2>En Azhagi, Raji ❤️</h2>
+
+                        <p>
+                            Indha website-la irukkura ovvoru page-um
+                            unakkaaga. Aana en vaazhkaila irukkura
+                            ovvoru naalum, un kooda vaazha pora
+                            namakkaaga.
+                        </p>
+
+                        <p>
+                            Credits inga mudiyalaam. Namma
+                            conversations, sirippu, chinna sandai,
+                            late-night talks, random cravings,
+                            hugs—idhellam innum dhaan start aaga
+                            pogudhu.
+                        </p>
+
+                        <strong>Un Ram ❤️</strong>
+                    </article>
+
+                    <article class="credits-block credits-the-end">
+                        <p>
+                            A RAM &amp; RAJI FOREVER PRODUCTION
+                        </p>
+
+                        <h2>The End?</h2>
+
+                        <h3>
+                            Illai… Idhu Dhaane Beginning.
+                        </h3>
+
+                        <span>∞</span>
+
+                        <strong>
+                            TO BE CONTINUED FOREVER
+                        </strong>
+
+                        <small>
+                            No sequel needed. Namma story never ends. ❤️
+                        </small>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Controls -->
+
+            <div
+                id="rollCreditsControls"
+                class="roll-credits-controls"
+                hidden
+            >
+                <button
+                    id="rollCreditsPauseBtn"
+                    type="button"
+                >
+                    <span aria-hidden="true">⏸</span>
+                    Pause
+                </button>
+
+                <div
+                    class="roll-credits-progress"
+                    role="progressbar"
+                    aria-label="Credits progress"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                >
+                    <span id="rollCreditsProgressBar"></span>
+                </div>
+
+                <button
+                    id="rollCreditsSkipBtn"
+                    type="button"
+                >
+                    Skip to Forever
+                    <span aria-hidden="true">»</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Final unlocked message -->
+
+        <div
+            id="rollCreditsEncore"
+            class="roll-credits-encore"
+            aria-live="polite"
+            hidden
+        >
+            <span aria-hidden="true">💍❤️</span>
+
+            <p>THE REAL STORY BEGINS ON</p>
+
+            <h2>11 · 11 · 2026</h2>
+
+            <blockquote>
+                “Azhagi, end credits vandhaalum un kaiya vida
+                maatten. Because nee dhaan en favourite beginning,
+                middle and forever.”
+            </blockquote>
+
+            <button
+                id="rollCreditsReplayBtn"
+                type="button"
+            >
+                Replay Our Love Story ↺
+            </button>
+        </div>
+
+        <!-- Always-visible navigation to the next page.
+             Keep this outside #rollCreditsEncore because that card is hidden
+             until the scrolling credits have finished. -->
+        <div
+            id="rollCreditsStarsNavigation"
+            class="roll-credits-stars-navigation"
+        >
+            <button
+                id="rollCreditsToStarsBtn"
+                class="roll-credits-to-stars-btn page-next-btn"
+                data-love-target="page-trillion-stars"
+                type="button"
+            >
+                <span>Explore Our Trillion Stars ✨</span>
+                <span
+                    class="roll-credits-stars-arrow"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
+            </button>
+        </div>
+
+        <p
+            id="rollCreditsStatus"
+            class="roll-credits-status"
+            aria-live="polite"
+        >
+            Press Start — popcorn optional, Raji mandatory. 🍿❤️
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= PAGE: TRILLION STARS ================= -->
+
+<section
+    id="page-trillion-stars"
+    class="page love-page trillion-stars-page"
+    aria-labelledby="trillionStarsPageTitle"
+    aria-hidden="true"
+>
+    <div class="trillion-space-background" aria-hidden="true">
+        <span class="trillion-nebula nebula-one"></span>
+        <span class="trillion-nebula nebula-two"></span>
+        <span class="trillion-nebula nebula-three"></span>
+
+        <span class="trillion-orbit orbit-one"></span>
+        <span class="trillion-orbit orbit-two"></span>
+    </div>
+
+    <div
+        id="trillionCelebrationLayer"
+        class="trillion-celebration-layer"
+        aria-hidden="true"
+    ></div>
+
+    <div class="trillion-stars-shell">
+
+        <header class="trillion-stars-heading">
+            <p class="trillion-stars-eyebrow">
+                Chapter Beyond The Credits · Our Private Universe
+            </p>
+
+            <h1 id="trillionStarsPageTitle">
+                A Trillion Stars.
+                <span>One Azhagi.</span>
+            </h1>
+
+            <p>
+                Indha universe-la kodi kodi stars irukkalaam.
+                Aana en darkness-ku light kudutha ore star nee dhaan,
+                Raji. ✨❤️
+            </p>
+        </header>
+
+        <div
+            class="trillion-observatory-bar"
+            aria-label="Love observatory details"
+        >
+            <div>
+                <small>OBSERVER</small>
+                <strong>Ram</strong>
+            </div>
+
+            <span aria-hidden="true">✦</span>
+
+            <div>
+                <small>FAVOURITE STAR</small>
+                <strong>Raji</strong>
+            </div>
+
+            <span aria-hidden="true">✦</span>
+
+            <div>
+                <small>ORBIT</small>
+                <strong>Forever</strong>
+            </div>
+        </div>
+
+        <div
+            id="trillionUniverse"
+            class="trillion-universe"
+        >
+            <canvas
+                id="trillionStarsCanvas"
+                class="trillion-stars-canvas"
+                aria-label="Interactive field of twinkling stars. Tap anywhere to make a love wish."
+            >
+                Your browser does not support the interactive star canvas.
+            </canvas>
+
+            <div
+                class="trillion-viewfinder"
+                aria-hidden="true"
+            >
+                <span class="viewfinder-corner corner-tl"></span>
+                <span class="viewfinder-corner corner-tr"></span>
+                <span class="viewfinder-corner corner-bl"></span>
+                <span class="viewfinder-corner corner-br"></span>
+                <span class="viewfinder-crosshair"></span>
+            </div>
+
+            <span
+                class="trillion-search-beam"
+                aria-hidden="true"
+            ></span>
+
+            <svg
+                id="trillionHeartConstellation"
+                class="trillion-heart-constellation"
+                viewBox="0 0 500 430"
+                aria-hidden="true"
+            >
+                <path
+                    d="M250 372 C213 333 82 248 82 144
+                       C82 82 128 49 181 49
+                       C218 49 241 70 250 96
+                       C260 70 283 49 320 49
+                       C373 49 418 82 418 144
+                       C418 248 287 333 250 372Z"
+                ></path>
+
+                <g>
+                    <circle cx="250" cy="372" r="5"></circle>
+                    <circle cx="168" cy="318" r="4"></circle>
+                    <circle cx="105" cy="244" r="5"></circle>
+                    <circle cx="83" cy="154" r="4"></circle>
+                    <circle cx="112" cy="80" r="5"></circle>
+                    <circle cx="181" cy="49" r="5"></circle>
+                    <circle cx="250" cy="96" r="6"></circle>
+                    <circle cx="320" cy="49" r="5"></circle>
+                    <circle cx="389" cy="80" r="5"></circle>
+                    <circle cx="418" cy="154" r="4"></circle>
+                    <circle cx="395" cy="244" r="5"></circle>
+                    <circle cx="332" cy="318" r="4"></circle>
+                </g>
+            </svg>
+
+            <button
+                id="trillionFavouriteStar"
+                class="trillion-favourite-star"
+                type="button"
+                aria-label="Open Ram's favourite star"
+                aria-hidden="true"
+                disabled
+            >
+                <span
+                    class="favourite-star-rays"
+                    aria-hidden="true"
+                ></span>
+
+                <span
+                    class="favourite-star-core"
+                    aria-hidden="true"
+                >
+                    ✦
+                </span>
+
+                <small>Tap Me, Azhagi</small>
+            </button>
+
+            <div
+                class="trillion-universe-hud"
+                aria-hidden="true"
+            >
+                <span>RA&nbsp; 11h 11m</span>
+                <span>LOVE SPECTRUM&nbsp; ∞</span>
+                <span>HEART SIGNAL&nbsp; STRONG</span>
+            </div>
+
+            <div
+                id="trillionTapBurstLayer"
+                class="trillion-tap-burst-layer"
+                aria-hidden="true"
+            ></div>
+        </div>
+
+        <div class="trillion-control-panel">
+
+            <div
+                class="trillion-live-status"
+                aria-live="polite"
+            >
+                <span
+                    id="trillionStatusDot"
+                    aria-hidden="true"
+                ></span>
+
+                <p id="trillionStatus">
+                    Telescope ready. En favourite star-ah search
+                    pannalama? 🔭
+                </p>
+            </div>
+
+            <button
+                id="trillionFindStarBtn"
+                class="trillion-find-star-btn"
+                type="button"
+            >
+                <span aria-hidden="true">⌖</span>
+                Find Ram's Favourite Star
+            </button>
+
+            <p class="trillion-touch-instruction">
+                Sky-la enga venaalum tap pannu — ovvoru
+                star-kullayum naan unakkaaga oru chinna message
+                vachirukken.
+            </p>
+
+            <div class="trillion-touch-counter">
+                <span>LOVE STARS TOUCHED</span>
+                <strong id="trillionTouchCount">00</strong>
+                <small>/ ∞</small>
+            </div>
+
+            <div
+                id="trillionCosmicNote"
+                class="trillion-cosmic-note"
+                aria-live="polite"
+            >
+                <span aria-hidden="true">✦</span>
+
+                <p>
+                    Mudhal star-ah touch pannu, Azhagi…
+                    universe-kitta namma secret irukku. ❤️
+                </p>
+            </div>
+        </div>
+
+        <div
+            id="trillionLoveReveal"
+            class="trillion-love-reveal"
+            aria-live="polite"
+            hidden
+        >
+            <p class="trillion-reveal-kicker">
+                SEARCH COMPLETE · ONE PERFECT MATCH FOUND
+            </p>
+
+            <span
+                class="trillion-reveal-symbol"
+                aria-hidden="true"
+            >
+                ✨ R ❤️ R ✨
+            </span>
+
+            <h2>
+                En Favourite Star Nee Dhaane, Raji.
+            </h2>
+
+            <p>
+                Indha universe-la oru trillion stars irundhaalum,
+                en kannu unna mattum dhaan thedum. Matha stars ellam
+                iruttula light kudukkum; nee mattum en whole life-ku
+                light kuduthutta.
+            </p>
+
+            <p>
+                Unna kandupidichadhu luck mattum illa. En vaazhkai
+                enakkaaga ezhudhi vecha azhagana destination nee.
+                Indha jenmam mattum illa—ovvoru universe-layum,
+                ovvoru lifetime-layum naan unna thirumba search
+                panni, thirumba choose pannuven. ❤️
+            </p>
+
+            <blockquote>
+                “Vaanathula stars evlo irukku-nu enakku theriyaadhu;
+                aana en idhayathula unakku mattum dhaan idam
+                irukku.”
+            </blockquote>
+
+            <div
+                class="trillion-love-equation"
+                aria-label="Our love equation"
+            >
+                <span>RAM</span>
+                <i>+</i>
+                <span>RAJI</span>
+                <i>=</i>
+                <strong>OUR UNIVERSE</strong>
+            </div>
+
+            <p class="trillion-final-promise">
+                Stars fade aagalaam. Universe change aagalaam.
+                Aana unna choose pannura en heart mattum eppavume
+                maaradhu.
+            </p>
+
+            <button
+                id="trillionSearchAgainBtn"
+                class="trillion-search-again-btn"
+                type="button"
+            >
+                Find Me In Every Universe ↺
+            </button>
+        </div>
+
+<!-- ================================================================
+             TRILLION STARS -> GRAND FINALE
+             This navigation belongs only to the Trillion Stars page.
+             ================================================================ -->
+
+        <div
+            id="trillionGrandFinaleNavigation"
+            class="trillion-grand-finale-navigation"
+        >
+            <button
+                id="trillionToGrandFinaleBtn"
+                class="trillion-grand-finale-btn page-next-btn"
+                data-love-target="page-grand-finale"
+                aria-controls="page-grand-finale"
+                type="button"
+            >
+                <span>Enter Our Grand Finale 🎆</span>
+                <span
+                    class="trillion-grand-finale-arrow"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= PAGE: GRAND FINALE ================= -->
+
+<section
+    id="page-grand-finale"
+    class="page love-page grand-finale-page"
+    aria-labelledby="grandFinaleTitle"
+    aria-hidden="true"
+>
+    <!-- Background -->
+
+    <div class="grand-background" aria-hidden="true">
+        <span class="grand-moon"></span>
+
+        <span class="grand-star star-one">✦</span>
+        <span class="grand-star star-two">✧</span>
+        <span class="grand-star star-three">✦</span>
+        <span class="grand-star star-four">✧</span>
+        <span class="grand-star star-five">✦</span>
+        <span class="grand-star star-six">✧</span>
+
+        <span class="grand-lantern lantern-one">♥</span>
+        <span class="grand-lantern lantern-two">♥</span>
+        <span class="grand-lantern lantern-three">♥</span>
+
+        <div class="grand-city">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Floating celebration hearts -->
+
+    <div
+        id="grandCelebrationLayer"
+        class="grand-celebration-layer"
+        aria-hidden="true"
+    ></div>
+
+    <div class="grand-finale-shell">
+
+        <!-- Heading -->
+
+        <header class="grand-heading">
+
+            <p class="grand-eyebrow">
+                The Final Page · Aana Namma Story-ku End Illai
+            </p>
+
+            <h1 id="grandFinaleTitle">
+                Namma Kadhalin
+                <span>Grand Finale</span>
+                🎆❤️
+            </h1>
+
+            <p class="grand-intro">
+                Indha website inga mudiyalaam, Azhagi. Aana unna
+                love panra en journey ippo dhaan nijamaave
+                aarambikkudhu. Namma kadhalukkaaga indha entire
+                sky-yum colourful-ah vedikkattum!
+            </p>
+
+            <div class="grand-couple-badge">
+                <span>RAM</span>
+                <i aria-hidden="true">∞</i>
+                <span>RAJI</span>
+                <strong>11 · 11 · 2026</strong>
+            </div>
+
+        </header>
+
+
+        <!-- Interactive fireworks area -->
+
+        <section
+            id="grandFireworksStage"
+            class="grand-fireworks-stage"
+            aria-labelledby="grandFireworksTitle"
+            tabindex="0"
+            role="button"
+            aria-label="Tap anywhere here to launch a firework"
+        >
+            <!-- Kept inside the stage so the GPU only paints this panel. -->
+
+            <canvas
+                id="grandFireworksCanvas"
+                class="grand-fireworks-canvas"
+                aria-hidden="true"
+            ></canvas>
+
+            <div class="grand-stage-copy">
+
+                <p>OUR PRIVATE FIREWORK SHOW</p>
+
+                <h2 id="grandFireworksTitle">
+                    Light Up Our Forever Sky
+                </h2>
+
+                <span>
+                    Sky-la enga venumnaalum tap pannu. Nee touch
+                    panna ovvoru place-layum namakkaaga oru
+                    love cracker vedikkum. 😂❤️
+                </span>
+
+            </div>
+
+            <div
+                class="grand-couple-symbol"
+                aria-hidden="true"
+            >
+                <span>R</span>
+                <i>♥</i>
+                <span>R</span>
+            </div>
+
+            <button
+                id="grandLaunchBtn"
+                class="grand-launch-btn"
+                type="button"
+            >
+                <span
+                    class="grand-launch-icon"
+                    aria-hidden="true"
+                >
+                    🎆
+                </span>
+
+                <span class="grand-launch-copy">
+                    <small>PRESS TO CELEBRATE US</small>
+                    <strong>Light Our Forever Sky</strong>
+                </span>
+
+                <span
+                    class="grand-launch-spark"
+                    aria-hidden="true"
+                >
+                    ✨
+                </span>
+            </button>
+
+            <div class="grand-burst-meter">
+                <span>Love crackers launched</span>
+                <strong id="grandBurstCount">00</strong>
+            </div>
+
+            <p
+                id="grandFireworksStatus"
+                class="grand-fireworks-status"
+                aria-live="polite"
+            >
+                Button-ah press pannu, Azhagi. Vaanam namakkaaga
+                wait pannudhu. ❤️
+            </p>
+
+            <small class="grand-tap-hint">
+                Tip: indha sky-la click pannina custom cracker
+                vedikkum.
+            </small>
+
+        </section>
+
+
+        <!-- Short journey summary -->
+
+        <section class="grand-journey">
+
+            <div class="grand-section-heading">
+                <p>FROM ONE HEARTBEAT TO FOREVER</p>
+
+                <h2>
+                    Namma Chinna Love Journey
+                </h2>
+            </div>
+
+            <div class="grand-journey-grid">
+
+                <article class="grand-journey-card">
+                    <span>01</span>
+                    <i aria-hidden="true">💓</i>
+                    <h3>First Heartbeat</h3>
+                    <p>
+                        Un touch vandhadhum en heart un peyarai
+                        beat panna aarambichuduchu.
+                    </p>
+                </article>
+
+                <article class="grand-journey-card">
+                    <span>02</span>
+                    <i aria-hidden="true">📸</i>
+                    <h3>Our Memories</h3>
+                    <p>
+                        Photos sila dhaan. Aana adhukkulla irukkira
+                        memories count panna mudiyadhu.
+                    </p>
+                </article>
+
+                <article class="grand-journey-card">
+                    <span>03</span>
+                    <i aria-hidden="true">🧩</i>
+                    <h3>Love Puzzle</h3>
+                    <p>
+                        Nee vandhadhum en incomplete life romba
+                        azhaga complete aayiduchu.
+                    </p>
+                </article>
+
+                <article class="grand-journey-card">
+                    <span>04</span>
+                    <i aria-hidden="true">🏠</i>
+                    <h3>Our Future Home</h3>
+                    <p>
+                        Veedu enga irundhaalum, nee irukkira place
+                        dhaan enakku real home.
+                    </p>
+                </article>
+
+                <article class="grand-journey-card">
+                    <span>05</span>
+                    <i aria-hidden="true">🤲</i>
+                    <h3>My Heart</h3>
+                    <p>
+                        Nee hold panna en heart, lifetime full-ah
+                        un kaiyila safe-ah irukkum.
+                    </p>
+                </article>
+
+                <article class="grand-journey-card">
+                    <span>06</span>
+                    <i aria-hidden="true">🌌</i>
+                    <h3>One Perfect Star</h3>
+                    <p>
+                        Trillion stars irundhaalum, en kannukku
+                        brightest-aa theriyura star nee dhaan.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Message unlocked after fireworks -->
+
+        <section
+            id="grandFinalMessage"
+            class="grand-final-message"
+            aria-live="polite"
+            hidden
+        >
+            <div
+                class="grand-message-seal"
+                aria-hidden="true"
+            >
+                <span>R</span>
+                <i>♥</i>
+                <span>R</span>
+            </div>
+
+            <p class="grand-message-kicker">
+                WEBSITE COMPLETED · LOVE STORY STILL LOADING
+            </p>
+
+            <h2>
+                Idhu Mudivu Illai,
+                <span>Azhagi… Idhu Namma Aarambam.</span>
+            </h2>
+
+            <p>
+                Indha pages ellam naan create panna chinna surprise
+                mattum. Aana un kooda create panna pora life—adhu
+                dhaan en biggest dream.
+            </p>
+
+            <p>
+                Perfect-aana life enakku vendaam. Un kooda sirikkira
+                mornings, silly fights, random food cravings,
+                difficult days-la support, late-night conversations
+                and ordinary moments podhum.
+            </p>
+
+            <p>
+                Because nee en pakkathula irundha, ordinary day-kooda
+                enakku favourite memory-ah maaridum.
+            </p>
+
+            <blockquote>
+                “Website-ku final page irukkalaam. Un mela irukkira
+                en kadhalukku final line eppovume irukkaadhu.”
+            </blockquote>
+
+            <div class="grand-signature">
+                <small>
+                    Every day, every version, every lifetime
+                </small>
+
+                <strong>Un Ram ❤️</strong>
+            </div>
+
+            <div
+                class="grand-infinity"
+                aria-hidden="true"
+            >
+                <span>RAM</span>
+                <strong>∞</strong>
+                <span>RAJI</span>
+            </div>
+
+            <!-- Grand Finale → Namma Vaasal Kolam -->
+
+            <div
+                id="grandToKolamNavigation"
+                class="grand-to-kolam-navigation"
+            >
+                <button
+                    id="grandToKolamBtn"
+                    class="grand-to-kolam-btn page-next-btn"
+                    data-love-target="page-vaasal-kolam"
+                    aria-controls="page-vaasal-kolam"
+                    type="button"
+                >
+                    <span>Complete Namma Vaasal Kolam 🪷</span>
+                    <span aria-hidden="true">→</span>
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- Replay -->
+
+        <div class="grand-actions">
+
+            <button
+                id="grandReplayBtn"
+                class="grand-replay-btn"
+                type="button"
+            >
+                Crackers-ah Thirumba Vedikkalaam ↺
+            </button>
+
+        </div>
+
+
+        <footer class="grand-footer">
+
+            <p>
+                Made with too much love, konjam JavaScript,
+                and full-ah un nyabagam. 😂❤️
+            </p>
+
+            <strong>
+                THE END OF THIS WEBSITE · THE BEGINNING OF US
+            </strong>
+
+        </footer>
+
+    </div>
+</section>
+
+
+<!-- ================= PAGE: NAMMA VAASAL KOLAM ================= -->
+
+<section
+    id="page-vaasal-kolam"
+    class="page love-page vaasal-kolam-page"
+    aria-labelledby="vaasalKolamTitle"
+    aria-hidden="true"
+>
+    <div class="kolam-sunrise" aria-hidden="true">
+        <span class="kolam-sun"></span>
+
+        <span class="kolam-cloud cloud-left"></span>
+        <span class="kolam-cloud cloud-right"></span>
+
+        <span class="kolam-bird bird-one">⌁</span>
+        <span class="kolam-bird bird-two">⌁</span>
+
+        <div class="kolam-home home-rajapalayam">
+            <span class="kolam-roof"></span>
+            <span class="kolam-house-body"></span>
+            <small>RAJAPALAYAM</small>
+        </div>
+
+        <div class="kolam-home home-chennai">
+            <span class="kolam-roof"></span>
+            <span class="kolam-house-body"></span>
+            <small>CHENNAI</small>
+        </div>
+
+        <span class="kolam-jasmine jasmine-one">✿</span>
+        <span class="kolam-jasmine jasmine-two">✿</span>
+        <span class="kolam-jasmine jasmine-three">✿</span>
+        <span class="kolam-jasmine jasmine-four">✿</span>
+    </div>
+
+    <div
+        id="kolamPetalLayer"
+        class="kolam-petal-layer"
+        aria-hidden="true"
+    ></div>
+
+    <div class="vaasal-kolam-shell">
+        <header class="kolam-heading">
+            <p class="kolam-eyebrow">
+                One Last Touch · Rendu Ooru · Ore Vaasal
+            </p>
+
+            <h1 id="vaasalKolamTitle">
+                Namma Vaasal
+                <span>Kolam</span>
+                🪷
+            </h1>
+
+            <p class="kolam-intro">
+                Rajapalayam-la nee valandha vaasalum, Chennai-la
+                naan valandha vaasalum… indha onbadhu pulli
+                mudinja udane, namakkaaga ore pudhu vaasal
+                thirakkum, Azhagi. ❤️
+            </p>
+        </header>
+
+        <div class="kolam-hometown-ribbon" aria-label="Our hometowns becoming one home">
+            <span>
+                <i aria-hidden="true">🌿</i>
+                Rajapalayam
+            </span>
+
+            <div class="kolam-route" aria-hidden="true">
+                <i></i>
+                <strong>♥</strong>
+                <i></i>
+            </div>
+
+            <span>
+                Chennai
+                <i aria-hidden="true">🌊</i>
+            </span>
+        </div>
+
+        <div class="kolam-ceremony">
+            <div class="kolam-status-row">
+                <div class="kolam-live-status" aria-live="polite">
+                    <span aria-hidden="true"></span>
+                    <p id="kolamStatus">
+                        Namma pudhu vaasalukku kolam poda ready-ah? ❤️
+                    </p>
+                </div>
+
+                <div class="kolam-progress" aria-label="Kolam progress">
+                    <small>PULLI</small>
+                    <strong id="kolamProgressCount">00</strong>
+                    <span>/ 09</span>
+                </div>
+            </div>
+
+            <button
+                id="kolamStartBtn"
+                class="kolam-start-btn"
+                type="button"
+            >
+                <span aria-hidden="true">🪔</span>
+                Namma Kolam-ah Start Pannalaama?
+            </button>
+
+            <div
+                id="kolamBoard"
+                class="kolam-board"
+                aria-label="Interactive nine-dot love kolam"
+            >
+                <svg
+                    class="kolam-drawing"
+                    viewBox="0 0 300 300"
+                    role="img"
+                    aria-label="A kolam that is completed one line at a time"
+                >
+                    <defs>
+                        <linearGradient id="kolamLoveStroke" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#fff8dd"></stop>
+                            <stop offset="0.46" stop-color="#ffcf72"></stop>
+                            <stop offset="1" stop-color="#ef4f78"></stop>
+                        </linearGradient>
+
+                        <filter id="kolamSoftGlow" x="-30%" y="-30%" width="160%" height="160%">
+                            <feGaussianBlur stdDeviation="2.5" result="blur"></feGaussianBlur>
+                            <feMerge>
+                                <feMergeNode in="blur"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <g class="kolam-guide-lines" aria-hidden="true">
+                        <circle cx="75" cy="75" r="3"></circle>
+                        <circle cx="150" cy="75" r="3"></circle>
+                        <circle cx="225" cy="75" r="3"></circle>
+                        <circle cx="75" cy="150" r="3"></circle>
+                        <circle cx="150" cy="150" r="3"></circle>
+                        <circle cx="225" cy="150" r="3"></circle>
+                        <circle cx="75" cy="225" r="3"></circle>
+                        <circle cx="150" cy="225" r="3"></circle>
+                        <circle cx="225" cy="225" r="3"></circle>
+                    </g>
+
+                    <g
+                        class="kolam-love-lines"
+                        fill="none"
+                        stroke="url(#kolamLoveStroke)"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        filter="url(#kolamSoftGlow)"
+                    >
+                        <path
+                            data-kolam-step="1"
+                            d="M150 124 C126 124 126 150 150 150 C174 150 174 176 150 176 C126 176 126 150 150 150 C174 150 174 124 150 124"
+                        ></path>
+
+                        <path
+                            data-kolam-step="2"
+                            d="M150 124 C120 110 120 82 150 54 C180 82 180 110 150 124"
+                        ></path>
+
+                        <path
+                            data-kolam-step="3"
+                            d="M170 114 C194 104 217 90 225 64 C246 82 248 110 225 126"
+                        ></path>
+
+                        <path
+                            data-kolam-step="4"
+                            d="M176 150 C190 120 218 120 246 150 C218 180 190 180 176 150"
+                        ></path>
+
+                        <path
+                            data-kolam-step="5"
+                            d="M186 170 C196 194 210 217 236 225 C218 246 190 248 174 225"
+                        ></path>
+
+                        <path
+                            data-kolam-step="6"
+                            d="M150 176 C180 190 180 218 150 246 C120 218 120 190 150 176"
+                        ></path>
+
+                        <path
+                            data-kolam-step="7"
+                            d="M130 186 C106 196 83 210 75 236 C54 218 52 190 75 174"
+                        ></path>
+
+                        <path
+                            data-kolam-step="8"
+                            d="M124 150 C110 180 82 180 54 150 C82 120 110 120 124 150"
+                        ></path>
+
+                        <path
+                            data-kolam-step="9"
+                            d="M114 130 C104 106 90 83 64 75 C82 54 110 52 126 75"
+                        ></path>
+                    </g>
+
+                    <g
+                        id="kolamCentreSeal"
+                        class="kolam-centre-seal"
+                        aria-hidden="true"
+                    >
+                        <circle cx="150" cy="150" r="37"></circle>
+                        <text x="150" y="146">RAM ♥ RAJI</text>
+                        <text x="150" y="163">11 · 11 · 2026</text>
+                    </g>
+                </svg>
+
+                <div class="kolam-pulli-grid">
+                    <button class="kolam-pulli" data-kolam-step="9" style="--x:25%; --y:25%;" type="button" aria-label="Kolam pulli 9" disabled><span>9</span></button>
+                    <button class="kolam-pulli" data-kolam-step="2" style="--x:50%; --y:25%;" type="button" aria-label="Kolam pulli 2" disabled><span>2</span></button>
+                    <button class="kolam-pulli" data-kolam-step="3" style="--x:75%; --y:25%;" type="button" aria-label="Kolam pulli 3" disabled><span>3</span></button>
+
+                    <button class="kolam-pulli" data-kolam-step="8" style="--x:25%; --y:50%;" type="button" aria-label="Kolam pulli 8" disabled><span>8</span></button>
+                    <button class="kolam-pulli" data-kolam-step="1" style="--x:50%; --y:50%;" type="button" aria-label="Kolam pulli 1" disabled><span>1</span></button>
+                    <button class="kolam-pulli" data-kolam-step="4" style="--x:75%; --y:50%;" type="button" aria-label="Kolam pulli 4" disabled><span>4</span></button>
+
+                    <button class="kolam-pulli" data-kolam-step="7" style="--x:25%; --y:75%;" type="button" aria-label="Kolam pulli 7" disabled><span>7</span></button>
+                    <button class="kolam-pulli" data-kolam-step="6" style="--x:50%; --y:75%;" type="button" aria-label="Kolam pulli 6" disabled><span>6</span></button>
+                    <button class="kolam-pulli" data-kolam-step="5" style="--x:75%; --y:75%;" type="button" aria-label="Kolam pulli 5" disabled><span>5</span></button>
+                </div>
+
+                <div class="kolam-lamp lamp-left" aria-hidden="true">🪔</div>
+                <div class="kolam-lamp lamp-right" aria-hidden="true">🪔</div>
+            </div>
+
+            <p id="kolamInstruction" class="kolam-instruction">
+                Start button-ah press pannitu, glow aagura pulli-ah
+                order-la touch pannu.
+            </p>
+        </div>
+
+        <section
+            id="kolamCompletion"
+            class="kolam-completion"
+            aria-live="polite"
+            hidden
+        >
+            <p class="kolam-completion-kicker">
+                KOLAM COMPLETE · NAMMA VAASAL READY
+            </p>
+
+            <span class="kolam-completion-symbol" aria-hidden="true">
+                🪷 ராம் ♥ ராஜி 🪷
+            </span>
+
+            <h2>
+                Rendu Ooru Mudinju,
+                <span>Ore Veedu Aarambam.</span>
+            </h2>
+
+            <p>
+                Rajapalayam-la nee valandha vaasalum, Chennai-la
+                naan valandha vaasalum… ippo namma rendu perum
+                serndhu podra ore kolam-aagiduchu. Inime ore veedu,
+                ore vaasal, ore vaazhkai. ❤️
+            </p>
+
+            <blockquote>
+                “Ovvoru kaalaiyum indha kolam maadhiri pudhusa
+                aarambikkalaam; aana adha serndhu podra rendu
+                kaigal mattum eppovume nammalodadhaa irukkattum.”
+            </blockquote>
+
+            <div class="kolam-final-vow">
+                <small>INDHA WEBSITE-ODA KADAISI VARI</small>
+                <strong>
+                    Un kaiya pidichu, namma vaasalukkulla
+                    lifetime full-ah nadakkanum — Un Ram ❤️
+                </strong>
+            </div>
+
+            <button
+                id="kolamReplayBtn"
+                class="kolam-replay-btn"
+                type="button"
+            >
+                Namma Kolam-ah Thirumba Podalaam ↺
+            </button>
+        </section>
+
+        <footer class="kolam-footer">
+            <p>Website inga mudinjiduchu.</p>
+            <strong>NAMMA VAAZHKAI IPPO DHAAN AARAMBAM ❤️</strong>
+        </footer>
+    </div>
+
+    <button
+    id="openLoveEndCard"
+    class="love-primary-btn page-next-btn"
+    type="button"
+    data-love-target="page-love-end"
+    aria-controls="page-love-end"
+>
+    Raji ma… innum oru chinna vishayam ♡
+</button>
+</section>
+
+<!-- ================= OUR FOREVER: END CARD ================= -->
+
+<section
+    id="page-love-end"
+    class="page love-end-page"
+    aria-labelledby="loveEndTitle"
+    aria-hidden="true"
+>
+    <div class="le-shell">
+
+        <header class="le-masthead">
+            <span>
+                Ram <span aria-hidden="true">♡</span> Raji
+            </span>
+
+            <span>A little surprise. A lifetime of love.</span>
+        </header>
+
+        <div class="le-layout">
+
+            <div class="le-intro">
+
+                <p class="le-eyebrow">
+                    For all my tomorrows
+                </p>
+
+                <h1 id="loveEndTitle" tabindex="-1">
+                    You. Me.
+                    <em>Every<br>tomorrow.</em>
+                </h1>
+
+                <p class="le-intro-copy">
+                    Surprise mudinjiduchu, Raji ma…<br>
+                    aana unna nesikkaradhu,<br>
+                    ovvoru naalum pudhusaa aarambikkum.
+                </p>
+
+                <div class="le-dedication">
+
+                    <span class="le-heart" aria-hidden="true">♡</span>
+
+                    <p>
+                        Unna sirikka vaikka oru surprise.<br>
+                        Un kooda vaazha oru muzhu vaazhkai.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <article
+                class="le-letter"
+                aria-labelledby="loveEndLetterTitle"
+            >
+
+                <div class="le-letter-top">
+
+                    <p class="le-eyebrow">
+                        Oru chinna kadaisi kadidham
+                    </p>
+
+                    <span aria-hidden="true">♡</span>
+
+                </div>
+
+                <h2 id="loveEndLetterTitle">
+                    En Raji ma,
+                </h2>
+
+                <div class="le-letter-copy">
+
+                    <p>
+                        Indha surprise-la ovvoru page-um mudinjirukkalaam.
+                        Aana un kooda naan vaazha aasai padura naatkalukku,
+                        idhu dhaan aarambam.
+                    </p>
+
+                    <p>
+                        Un sirippa mattum illa… un tired-aana naatkalaiyum,
+                        un kavalaiyaiyum, nee vaarthai illaama amaidhiyaa
+                        irukkura nerangalaiyum naan nesikka aasai paduren.
+                    </p>
+
+                    <p>
+                        Chinna chinna sandai vandhaalum, un kaiya pidichukittu
+                        pesi purinjukka aasai paduren. Un kanavugalukku
+                        un pakkathula nikka aasai paduren.
+                    </p>
+
+                    <p>
+                        Varushangal kazhinju namma indha naala ninaichu
+                        sirikkumbodhu, appovum naan solla virumburadhu
+                        onnu dhaan…
+                    </p>
+
+                </div>
+
+                <blockquote class="le-letter-quote">
+                    “Innaikkum nee dhaan, Raji ma.<br>
+                    Naalaikkum nee dhaan.”
+                </blockquote>
+
+                <footer class="le-signature">
+                    <span>Eppovum un pakkathula,</span>
+                    <strong>Un Ram.</strong>
+                </footer>
+
+            </article>
+
+        </div>
+
+        <div class="le-promise-wrap">
+
+            <div
+                class="le-celebration"
+                aria-hidden="true"
+            ></div>
+
+            <details
+                id="loveEndPromise"
+                class="le-promise"
+            >
+
+                <summary class="le-promise-trigger">
+
+                    <span>En kadaisi promise… unakkaaga</span>
+
+                    <span
+                        class="le-promise-icon"
+                        aria-hidden="true"
+                    >
+                        ♡
+                    </span>
+
+                </summary>
+
+                <div class="le-promise-body">
+
+                    <p class="le-eyebrow">
+                        Appovum, un kai dhaan
+                    </p>
+
+                    <p>
+                        Oru naal, namma mudi naraichu, nadakkura vegam
+                        korainjaalum… un pakkathula utkaarndhu,
+                        un kaiya pidichukittu sollanum:
+                    </p>
+
+                    <blockquote>
+                        “Un kooda vaazhndha indha vaazhkaiya,<br>
+                        marubadiyum un koodave vaazhanum.”
+                    </blockquote>
+
+                    <p class="le-promise-last">
+                        Andha alavukku unna nesikkiren, Raji ma.
+                    </p>
+
+                </div>
+
+            </details>
+
+        </div>
+
+        <footer class="le-ending">
+
+            <p>
+                Indha page mudiyalaam. Namma kadhai thodarattum.
+            </p>
+
+            <span>
+                Ram <span aria-hidden="true">♡</span> Raji
+            </span>
+
+        </footer>
+
+    </div>
+
+</section>
+
+
+<!-- AUDIO FILES -->
+
+<audio
+    id="ramVoiceSound"
+    src="universfield-child-voice-no-02-242246.mp3"
+    preload="auto"
+></audio>
+
+<audio
+    id="netflixIntroSound"
+    src="netflix_intro.mp3"
+    preload="auto"
+></audio>
+
+<audio
+    id="swirlSound"
+    src="photo-click-click.mp3"
+    preload="auto"
+></audio>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
